@@ -213,7 +213,7 @@ export const LatestProjects: React.FC = () => {
       <div className="absolute top-32 left-20 w-48 h-48 sm:w-64 sm:h-64 bg-[#5EBEEB]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-32 right-20 w-48 h-48 sm:w-64 sm:h-64 bg-[#FFB347]/5 rounded-full blur-3xl"></div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1900px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">

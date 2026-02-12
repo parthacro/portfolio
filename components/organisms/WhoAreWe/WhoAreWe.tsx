@@ -92,7 +92,7 @@ export const WhoAreWe: React.FC = () => {
       <div className="absolute top-20 left-10 w-48 h-48 sm:w-64 sm:h-64 bg-[#FFB347]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-48 h-48 sm:w-64 sm:h-64 bg-[#5EBEEB]/5 rounded-full blur-3xl"></div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1900px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Left Content */}
           <div className="px-2 sm:px-0">

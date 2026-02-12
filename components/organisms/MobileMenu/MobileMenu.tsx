@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { Navigation } from '@/components/molecules/Navigation';
 import { SocialLinks } from '@/components/molecules/SocialLinks';
+import { Button } from '@/components/atoms/Button';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -40,6 +41,11 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
       <div className="flex flex-col h-full">
         <div className="flex-1 pt-24 px-8 pb-8 overflow-hidden">
           <Navigation isMobile onLinkClick={onClose} />
+          
+          {/* Hire Me Button */}
+          <div className="mt-8">
+            <Button href="/hire" className="w-full">Hire Me</Button>
+          </div>
           
           <div className="mt-12 pt-8 border-t border-gray-700">
             <p className="text-gray-300 text-base mb-2">work@hexaloop.com</p>

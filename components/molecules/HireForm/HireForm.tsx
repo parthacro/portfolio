@@ -127,7 +127,7 @@ export const HireForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-3xl mx-auto space-y-6 sm:space-y-8 px-2 sm:px-0 pb-16 sm:pb-20">
+    <form onSubmit={handleSubmit} className="w-full max-w-5xl mx-auto space-y-6 sm:space-y-8 px-2 sm:px-0 pb-16 sm:pb-20">
       {/* Personal Information */}
       <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
         <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">Personal Information</h3>

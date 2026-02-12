@@ -202,7 +202,7 @@ export default function ServicesPage() {
             </svg>
           </div>
 
-          <div className="max-w-7xl mx-auto relative">
+          <div className="max-w-[1900px] mx-auto relative">
             <SectionHeading 
               preTitle="WHAT WE DO?"
               title="The service we offer is specifically designed to meet your needs."
