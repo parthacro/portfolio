@@ -64,7 +64,7 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto space-y-5 sm:space-y-6 px-2 sm:px-0 pb-16 sm:pb-20">
+    <form onSubmit={handleSubmit} className="w-full max-w-4xl mx-auto space-y-5 sm:space-y-6 px-2 sm:px-0 pb-16 sm:pb-20">
       <Input
         id="name"
         label="Your Name"

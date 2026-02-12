@@ -84,7 +84,7 @@ export const WhyChooseUs: React.FC = () => {
       <div className="absolute top-32 right-20 w-48 h-48 sm:w-64 sm:h-64 bg-[#5EBEEB]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-32 left-20 w-48 h-48 sm:w-64 sm:h-64 bg-[#FFB347]/5 rounded-full blur-3xl"></div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1900px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
           {/* Left Illustration */}
           <div className="order-2 lg:order-1 px-4 sm:px-0">

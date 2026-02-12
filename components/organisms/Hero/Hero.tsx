@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
 
           {/* Right Illustration */}
           <div className="relative order-1 lg:order-2 mt-4 sm:mt-0">
-            <div className="relative w-full aspect-square max-w-sm sm:max-w-md lg:max-w-lg mx-auto">
+            <div className="relative w-full aspect-square max-w-sm sm:max-w-md lg:max-w-xl mx-auto">
               {/* Decorative Elements */}
               <div className="absolute top-4 left-4 sm:top-10 sm:left-10 w-10 h-10 sm:w-16 sm:h-16 bg-[#FFB347] rounded-full animate-float"></div>
               <div className="absolute top-12 right-12 sm:top-20 sm:right-20 w-8 h-8 sm:w-12 sm:h-12 bg-[#FF6B6B] rounded-full animate-float-delayed"></div>

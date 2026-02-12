@@ -213,7 +213,7 @@ export const Strategy: React.FC = () => {
         <div className="absolute top-20 right-20 w-64 h-64 bg-blue-100 rounded-full opacity-30 blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-64 h-64 bg-green-100 rounded-full opacity-30 blur-3xl"></div>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1900px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
             {/* Left Illustration */}
             <div className="order-2 lg:order-1">
@@ -264,7 +264,7 @@ export const Strategy: React.FC = () => {
         <div className="absolute top-20 right-20 w-64 h-64 bg-blue-100 rounded-full opacity-30 blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-64 h-64 bg-purple-100 rounded-full opacity-30 blur-3xl"></div>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1900px] mx-auto">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">
               OUR EXPERTISE

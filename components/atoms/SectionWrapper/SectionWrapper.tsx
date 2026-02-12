@@ -11,7 +11,7 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({
 }) => {
   return (
     <section className={`py-12 sm:py-16 md:py-20 lg:py-32 px-3 sm:px-6 lg:px-8 ${className}`}>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1900px] mx-auto">
         {children}
       </div>
     </section>

@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
 
       {/* CTA Section */}
       <div className="relative pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-12 sm:pb-14 md:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1900px] mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
             <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center md:text-left max-w-2xl leading-tight px-2 sm:px-0">
               Join our community by using our services and grow your business.
@@ -63,13 +63,13 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Divider Line */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1900px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="border-t border-gray-600"></div>
       </div>
 
       {/* Footer Content */}
       <div className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1900px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12">
             {/* Brand Column */}
             <div className="space-y-6">
