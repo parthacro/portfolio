@@ -93,19 +93,19 @@ export const Services: React.FC = () => {
       title: 'Website Design',
       description: 'We offers creative, unique, economic, and trendy Website Design. We provide exclusive designs of your ideas with multiple options to choose from.',
       icon: <WebDesignIcon />,
-      href: '#web-design'
+      href: '/services/web-design'
     },
     {
       title: 'Mobile Application',
       description: 'We develop mobile apps which works on both iOS & Android platforms. We are expertise in building all type of custom apps for startup to large businesses.',
       icon: <GraphicDesignIcon />,
-      href: '#mobile-app'
+      href: '/services/mobile-app-development'
     },
     {
       title: 'Graphics & Multimedia Design',
       description: 'We offer a range of graphic design services such as Logo Design, Business cards, Brochure Design, Banner Design, Newsletter Design, and more.',
       icon: <AnimationIcon />,
-      href: '#graphic-design'
+      href: '/services/graphic-design'
     }
   ];
 

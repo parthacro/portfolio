@@ -1,70 +1,16 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ContactIllustration = () => (
-  <div className="relative w-full max-w-lg mx-auto h-[300px] sm:h-[350px] md:h-[400px]">
-    {/* Background circles */}
-    <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-3xl overflow-hidden">
-      <div className="absolute top-10 right-10 w-20 h-20 sm:w-24 sm:h-24 bg-pink-200 rounded-full opacity-40"></div>
-      <div className="absolute bottom-10 left-10 w-16 h-16 sm:w-20 sm:h-20 bg-blue-200 rounded-full opacity-40"></div>
-    </div>
-    
-    {/* Main phone */}
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <div className="bg-[#4A90E2] rounded-[2.5rem] sm:rounded-[3rem] w-[160px] sm:w-[200px] md:w-[240px] h-[260px] sm:h-[320px] md:h-[380px] shadow-2xl p-3 sm:p-4 relative">
-        {/* Phone notch */}
-        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 bg-[#3A7BC8] w-20 sm:w-24 h-4 sm:h-5 rounded-full"></div>
-        
-        {/* Phone screen */}
-        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-[2rem] sm:rounded-[2.5rem] w-full h-full mt-3 sm:mt-4 flex items-center justify-center relative overflow-hidden">
-          {/* Browser dots */}
-          <div className="absolute top-3 sm:top-4 left-3 sm:left-4 flex gap-1">
-            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-            <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-            <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-          </div>
-          
-          {/* Shield icon */}
-          <div className="text-6xl sm:text-7xl md:text-8xl">✓</div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 sm:w-28 md:w-32 h-28 sm:h-32 md:h-36 bg-gradient-to-br from-green-400 to-emerald-500 rounded-[2rem] flex items-center justify-center shadow-lg">
-              <div className="text-white text-5xl sm:text-6xl md:text-7xl font-bold">✓</div>
-            </div>
-          </div>
-          
-          {/* Bottom line */}
-          <div className="absolute bottom-4 sm:bottom-5 left-1/2 transform -translate-x-1/2 w-16 sm:w-20 h-1 bg-gray-300 rounded-full"></div>
-        </div>
-        
-        {/* Home button */}
-        <div className="absolute bottom-2 sm:bottom-3 left-1/2 transform -translate-x-1/2 w-10 sm:w-12 h-10 sm:h-12 bg-white rounded-full shadow-md"></div>
-      </div>
-    </div>
-    
-    {/* Floating icons */}
-    <div className="absolute top-8 sm:top-12 left-4 sm:left-8 bg-yellow-400 p-2 sm:p-3 rounded-lg shadow-lg animate-float">
-      <div className="text-2xl sm:text-3xl">⚙️</div>
-    </div>
-    
-    <div className="absolute top-12 sm:top-16 right-6 sm:right-10 bg-green-400 p-2 sm:p-3 rounded-xl shadow-lg animate-float-delayed">
-      <div className="text-xl sm:text-2xl">📶</div>
-    </div>
-    
-    <div className="absolute top-28 sm:top-32 left-2 sm:left-4 bg-blue-500 p-2 sm:p-3 rounded-lg shadow-lg animate-pulse">
-      <div className="text-xl sm:text-2xl">🔑</div>
-    </div>
-    
-    {/* People sitting */}
-    <div className="absolute bottom-0 left-6 sm:left-10 transform translate-y-4">
-      <div className="text-5xl sm:text-6xl">🧑</div>
-    </div>
-    
-    <div className="absolute bottom-0 right-6 sm:right-10 transform translate-y-4">
-      <div className="text-5xl sm:text-6xl">👩</div>
-    </div>
-    
-    <div className="absolute bottom-4 right-20 sm:right-24 bg-gray-100 p-2 rounded-lg shadow-md">
-      <div className="text-xl sm:text-2xl">💬</div>
-    </div>
+  <div className="relative w-full max-w-lg mx-auto h-[300px] sm:h-[350px] md:h-[400px] flex items-center justify-center">
+    <Image
+      src="/icons/contact-us-ion.png"
+      alt="Contact Us"
+      width={500}
+      height={400}
+      className="w-full h-full object-contain"
+      priority
+    />
   </div>
 );
 
