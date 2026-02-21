@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface ServiceCardProps {
   title: string;
@@ -31,13 +32,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       </p>
 
       {/* Learn More Link */}
-      <a 
+      <Link 
         href={href}
         className="text-[#5EBEEB] font-medium hover:text-[#4AADE0] transition-colors inline-flex items-center gap-2 group/link"
       >
         Learn More 
         <span className="transform transition-transform group-hover/link:translate-x-1">→</span>
-      </a>
+      </Link>
     </div>
   );
 };

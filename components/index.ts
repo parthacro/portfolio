@@ -32,6 +32,7 @@ export { Header } from './organisms/Header';
 export { Hero } from './organisms/Hero';
 export { MobileMenu } from './organisms/MobileMenu';
 export { Services } from './organisms/Services';
+export { ServiceDetail } from './organisms/ServiceDetail';
 export { WhoAreWe } from './organisms/WhoAreWe';
 export { Strategy } from './organisms/Strategy';
 export { WhyChooseUs } from './organisms/WhyChooseUs';
