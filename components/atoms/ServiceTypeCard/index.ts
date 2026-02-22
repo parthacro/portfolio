@@ -1,0 +1,1 @@
+export { ServiceTypeCard } from './ServiceTypeCard';

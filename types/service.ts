@@ -8,6 +8,11 @@ export interface Service {
   features: string[];
   benefits: string[];
   technologies?: string[];
+  serviceTypes?: {
+    icon: React.ReactNode;
+    title: string;
+    description: string;
+  }[];
   processSteps: {
     step: number;
     title: string;

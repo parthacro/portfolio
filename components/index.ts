@@ -12,6 +12,7 @@ export { TechStackBadge } from './atoms/TechStackBadge';
 export { ModalBackdrop } from './atoms/ModalBackdrop';
 export { Input } from './atoms/Input';
 export { TextArea } from './atoms/TextArea';
+export { ServiceTypeCard } from './atoms/ServiceTypeCard';
 
 // Molecules
 export { Navigation } from './molecules/Navigation';

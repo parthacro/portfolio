@@ -4,6 +4,7 @@ import { CheckmarkItem } from '@/components/atoms/CheckmarkItem';
 import { StepCard } from '@/components/molecules/StepCard';
 import { SectionHeading } from '@/components/atoms/SectionHeading';
 import { Button } from '@/components/atoms/Button';
+import { ServiceTypeCard } from '@/components/atoms/ServiceTypeCard';
 import Link from 'next/link';
 
 interface ServiceDetailProps {
@@ -88,6 +89,28 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, icon }) =
           </div>
         </div>
       </section>
+
+      {/* Service Types Section - Dynamic for any service with serviceTypes */}
+      {service.serviceTypes && service.serviceTypes.length > 0 && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-[#EDF7FC]">
+          <div className="max-w-7xl mx-auto">
+            <SectionHeading 
+              preTitle="SERVICE TYPES"
+              title={`${service.title} Services We Offer`}
+            />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {service.serviceTypes.map((serviceType, index) => (
+                <ServiceTypeCard
+                  key={index}
+                  icon={serviceType.icon}
+                  title={serviceType.title}
+                  description={serviceType.description}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
