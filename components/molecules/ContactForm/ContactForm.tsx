@@ -1,17 +1,28 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Input } from '@/components/atoms/Input';
 import { TextArea } from '@/components/atoms/TextArea';
 import { Button } from '@/components/atoms/Button';
 
-export const ContactForm: React.FC = () => {
+interface ContactFormProps {
+  initialMessage?: string;
+}
+
+export const ContactForm: React.FC<ContactFormProps> = ({ initialMessage = '' }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    message: '',
+    message: initialMessage,
   });
+
+  // Update message if initialMessage changes
+  useEffect(() => {
+    if (initialMessage) {
+      setFormData(prev => ({ ...prev, message: initialMessage }));
+    }
+  }, [initialMessage]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');

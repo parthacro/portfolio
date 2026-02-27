@@ -16,10 +16,10 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
   onToggle 
 }) => {
   return (
-    <div className="py-4">
+    <div className="py-4 relative z-10">
       <button
         onClick={onToggle}
-        className="w-full flex items-start justify-between text-left group"
+        className="w-full flex items-start justify-between text-left group relative z-10"
       >
         <div className="flex items-center gap-3 flex-1">
           <svg

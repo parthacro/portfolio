@@ -1,5 +1,6 @@
 import React from 'react';
 import { AboutFeature } from '@/components/molecules/AboutFeature';
+import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 
 const MegaphoneIcon = () => (
   <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
@@ -20,61 +21,93 @@ const MegaphoneIcon = () => (
 );
 
 const TeamCollage = () => (
-  <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px]">
-    {/* Background decorative elements */}
-    <div className="absolute top-8 right-12 w-32 h-32 bg-[#5EBEEB] rounded-full opacity-20 blur-2xl animate-pulse"></div>
-    <div className="absolute bottom-12 left-8 w-40 h-40 bg-[#FFB347] rounded-full opacity-20 blur-2xl animate-pulse-delayed"></div>
-    
-    {/* Main grid container */}
-    <div className="relative w-full h-full flex items-center justify-center">
-      <div className="grid grid-cols-2 gap-3 md:gap-4 lg:gap-5 max-w-lg mx-auto px-4">
-        {/* Top-left: Meeting room */}
-        <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[4/3] transform hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center p-4">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-300 rounded-full mx-auto mb-2"></div>
-              <div className="space-y-1">
-                <div className="h-2 bg-blue-300 rounded w-3/4 mx-auto"></div>
-                <div className="h-2 bg-blue-300 rounded w-1/2 mx-auto"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Top-right: Person portrait */}
-        <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[3/4] row-span-2 transform hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-100 to-orange-200"></div>
-          <div className="absolute inset-0 flex flex-col items-center justify-end pb-6">
-            <div className="w-20 h-20 md:w-24 md:h-24 bg-orange-300 rounded-full mb-4"></div>
-            <div className="w-3/4 h-12 bg-orange-300/50 rounded-t-3xl"></div>
-          </div>
-        </div>
-
-        {/* Bottom-left: Person at desk */}
-        <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[4/3] transform hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200"></div>
-          <div className="absolute inset-0 flex flex-col items-center justify-end pb-4">
-            <div className="w-14 h-14 md:w-16 md:h-16 bg-green-300 rounded-full mb-2"></div>
-            <div className="w-3/4 h-8 bg-green-300/50 rounded-t-2xl"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Decorative dots pattern */}
-    <div className="absolute top-4 left-4 grid grid-cols-6 gap-2 opacity-30">
-      {[...Array(24)].map((_, i) => (
-        <div key={i} className="w-1 h-1 bg-[#5EBEEB] rounded-full"></div>
-      ))}
-    </div>
-
-    {/* Floating circle button */}
-    <div className="absolute bottom-8 right-8 w-12 h-12 md:w-14 md:h-14 bg-[#5EBEEB] rounded-full shadow-lg flex items-center justify-center animate-float">
-      <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
-      </svg>
-    </div>
+  <div className="relative w-full flex items-center justify-center py-2 sm:py-4">
+    <svg viewBox="0 0 500 400" fill="none" className="w-full max-w-[260px] sm:max-w-[340px] md:max-w-[420px] h-auto">
+      {/* Background shape */}
+      <ellipse cx="250" cy="210" rx="200" ry="170" fill="#EDF7FC" />
+      
+      {/* Desk */}
+      <rect x="100" y="260" rx="8" width="300" height="12" fill="#5EBEEB" opacity="0.2" />
+      <rect x="150" y="272" rx="4" width="8" height="60" fill="#5EBEEB" opacity="0.15" />
+      <rect x="342" y="272" rx="4" width="8" height="60" fill="#5EBEEB" opacity="0.15" />
+      
+      {/* Laptop */}
+      <rect x="180" y="225" rx="6" width="140" height="36" fill="#2D3748" />
+      <rect x="184" y="228" rx="4" width="132" height="28" fill="#4A5568" />
+      {/* Screen content - code lines */}
+      <rect x="192" y="234" width="40" height="3" rx="1.5" fill="#5EBEEB" opacity="0.8" />
+      <rect x="236" y="234" width="25" height="3" rx="1.5" fill="#68D391" opacity="0.6" />
+      <rect x="192" y="240" width="55" height="3" rx="1.5" fill="#5EBEEB" opacity="0.5" />
+      <rect x="192" y="246" width="30" height="3" rx="1.5" fill="#FC8181" opacity="0.5" />
+      <rect x="226" y="246" width="45" height="3" rx="1.5" fill="#5EBEEB" opacity="0.4" />
+      {/* Laptop base */}
+      <path d="M170 261 H330 L325 265 H175 Z" fill="#4A5568" />
+      
+      {/* Center Person (main developer) */}
+      <circle cx="250" cy="175" r="28" fill="#5EBEEB" opacity="0.15" />
+      <circle cx="250" cy="170" r="18" fill="#FED7AA" />
+      <path d="M250 188 C235 188 222 200 222 215 L222 225 L278 225 L278 215 C278 200 265 188 250 188Z" fill="#5EBEEB" />
+      {/* Shirt detail */}
+      <path d="M243 188 L250 198 L257 188" stroke="#4AADE0" strokeWidth="1.5" fill="none" />
+      
+      {/* Left Person */}
+      <circle cx="145" cy="195" r="16" fill="#FED7AA" />
+      <path d="M145 211 C133 211 123 220 123 232 L123 250 L167 250 L167 232 C167 220 157 211 145 211Z" fill="#2D3748" />
+      {/* Left person arm reaching to laptop */}
+      <path d="M167 235 Q175 230 180 228" stroke="#FED7AA" strokeWidth="6" strokeLinecap="round" />
+      
+      {/* Right Person */}
+      <circle cx="355" cy="195" r="16" fill="#FED7AA" />
+      <path d="M355 211 C343 211 333 220 333 232 L333 250 L377 250 L377 232 C377 220 367 211 355 211Z" fill="#4AADE0" />
+      {/* Right person arm */}
+      <path d="M333 235 Q325 230 320 228" stroke="#FED7AA" strokeWidth="6" strokeLinecap="round" />
+      
+      {/* Floating elements - representing tech/ideas */}
+      {/* Gear icon */}
+      <g transform="translate(380, 120)">
+        <circle cx="0" cy="0" r="14" fill="#5EBEEB" opacity="0.12" />
+        <path d="M0-8 L2-3 L7-5 L5 0 L7 5 L2 3 L0 8 L-2 3 L-7 5 L-5 0 L-7-5 L-2-3Z" fill="#5EBEEB" opacity="0.6" />
+        <circle cx="0" cy="0" r="3" fill="white" />
+      </g>
+      
+      {/* Chat bubble */}
+      <g transform="translate(105, 130)">
+        <rect x="-18" y="-12" rx="8" width="36" height="24" fill="#5EBEEB" opacity="0.15" />
+        <circle cx="-6" cy="0" r="2.5" fill="#5EBEEB" opacity="0.5" />
+        <circle cx="0" cy="0" r="2.5" fill="#5EBEEB" opacity="0.5" />
+        <circle cx="6" cy="0" r="2.5" fill="#5EBEEB" opacity="0.5" />
+      </g>
+      
+      {/* Light bulb (idea) */}
+      <g transform="translate(310, 100)">
+        <circle cx="0" cy="0" r="12" fill="#FFB347" opacity="0.15" />
+        <path d="M0-6 C-4-6 -6-3 -6 0 C-6 3 -3 5 -3 7 L3 7 C3 5 6 3 6 0 C6-3 4-6 0-6Z" fill="#FFB347" opacity="0.5" />
+        <rect x="-2" y="7" rx="1" width="4" height="2" fill="#FFB347" opacity="0.4" />
+      </g>
+      
+      {/* Code bracket */}
+      <g transform="translate(155, 110)">
+        <text x="0" y="0" fontSize="18" fill="#5EBEEB" opacity="0.4" fontFamily="monospace" textAnchor="middle">&lt;/&gt;</text>
+      </g>
+      
+      {/* Hexagon (brand element) */}
+      <g transform="translate(400, 180)">
+        <polygon points="0,-12 10,-6 10,6 0,12 -10,6 -10,-6" fill="#5EBEEB" opacity="0.12" />
+        <polygon points="0,-7 6,-3.5 6,3.5 0,7 -6,3.5 -6,-3.5" fill="#5EBEEB" opacity="0.25" />
+      </g>
+      
+      {/* Small decorative dots */}
+      <circle cx="90" cy="170" r="3" fill="#5EBEEB" opacity="0.2" />
+      <circle cx="420" cy="150" r="2" fill="#5EBEEB" opacity="0.15" />
+      <circle cx="200" cy="100" r="2.5" fill="#5EBEEB" opacity="0.2" />
+      <circle cx="340" cy="85" r="2" fill="#5EBEEB" opacity="0.15" />
+      <circle cx="130" cy="260" r="2" fill="#5EBEEB" opacity="0.1" />
+      <circle cx="380" cy="270" r="2.5" fill="#5EBEEB" opacity="0.1" />
+      
+      {/* Connection lines (teamwork) */}
+      <path d="M165 210 Q200 190 230 190" stroke="#5EBEEB" strokeWidth="1" strokeDasharray="4 3" opacity="0.25" />
+      <path d="M335 210 Q300 190 270 190" stroke="#5EBEEB" strokeWidth="1" strokeDasharray="4 3" opacity="0.25" />
+    </svg>
   </div>
 );
 
@@ -87,41 +120,49 @@ export const WhoAreWe: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="pt-24 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 left-10 w-48 h-48 sm:w-64 sm:h-64 bg-[#FFB347]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-48 h-48 sm:w-64 sm:h-64 bg-[#5EBEEB]/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-[1900px] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 xl:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Left Content */}
           <div className="px-2 sm:px-0">
             {/* Icon and Heading */}
-            <div className="flex items-center gap-4 mb-6 sm:mb-8">
-              <MegaphoneIcon />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Who Are We?
-              </h2>
-            </div>
+            <ScrollReveal variant="fadeLeft" duration={0.7}>
+              <div className="flex items-center gap-4 mb-4 sm:mb-6">
+                <MegaphoneIcon />
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                  Who Are We?
+                </h2>
+              </div>
+            </ScrollReveal>
 
             {/* Main Description */}
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
-              Hexaloop is a global leading software products and services company. We provide wide range of services in various areas.
-            </p>
+            <ScrollReveal variant="fadeLeft" delay={0.1} duration={0.7}>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-5 md:mb-6">
+                Hexaloop is a global leading software products and services company. We provide wide range of services in various areas.
+              </p>
+            </ScrollReveal>
 
             {/* Secondary Description */}
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-8 md:mb-10">
-              We offer high quality and reliable software development services focused on the client's specific requirement. Our main aim is to provide our clients best quality applications and deliver them on time without any hassle. We have efficient and experienced team of developers who have very good expertise in various technologies.
-            </p>
+            <ScrollReveal variant="fadeLeft" delay={0.2} duration={0.7}>
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-5 sm:mb-6 md:mb-8">
+                We offer high quality and reliable software development services focused on the client's specific requirement. Our main aim is to provide our clients best quality applications and deliver them on time without any hassle. We have efficient and experienced team of developers who have very good expertise in various technologies.
+              </p>
+            </ScrollReveal>
 
             {/* Feature List */}
-            <AboutFeature features={features} />
+            <ScrollReveal variant="fadeUp" delay={0.3} duration={0.7}>
+              <AboutFeature features={features} />
+            </ScrollReveal>
           </div>
 
           {/* Right Image Collage */}
-          <div className="px-4 sm:px-0 order-first lg:order-last">
+          <ScrollReveal variant="fadeRight" delay={0.2} duration={0.8} className="px-4 sm:px-0 order-last">
             <TeamCollage />
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

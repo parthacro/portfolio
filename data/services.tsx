@@ -3,143 +3,160 @@ import { Service } from '@/types/service';
 
 // Icon Components
 export const WebDesignIcon = () => (
-  <div className="relative w-64 h-48">
-    <div className="absolute top-8 left-8 w-24 h-24 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
-    <div className="absolute bottom-8 right-8 w-32 h-32 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FF8C6B] rounded-2xl w-48 h-32 shadow-xl p-3">
-      <div className="bg-[#FFB347] h-6 rounded-t-lg mb-2 flex items-center px-2 gap-1">
-        <div className="w-2 h-2 bg-white rounded-full"></div>
-        <div className="w-2 h-2 bg-white rounded-full"></div>
-        <div className="w-2 h-2 bg-white rounded-full"></div>
+  <div className="relative w-32 h-24 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 lg:h-48">
+    <div className="absolute top-2 left-2 sm:top-4 sm:left-4 md:top-8 md:left-8 w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
+    <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 md:bottom-8 md:right-8 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#FF8C6B] rounded-xl sm:rounded-2xl w-24 h-16 sm:w-36 sm:h-24 md:w-48 md:h-32 shadow-xl p-1.5 sm:p-2 md:p-3">
+      <div className="bg-[#FFB347] h-3 sm:h-4 md:h-6 rounded-t-lg mb-1 sm:mb-1.5 md:mb-2 flex items-center px-1 sm:px-1.5 md:px-2 gap-0.5 sm:gap-0.5 md:gap-1">
+        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
+        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
+        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
       </div>
-      <div className="space-y-2">
-        <div className="h-2 bg-white/50 rounded w-3/4"></div>
-        <div className="h-2 bg-white/50 rounded w-1/2"></div>
+      <div className="space-y-1 sm:space-y-1.5 md:space-y-2">
+        <div className="h-1 sm:h-1.5 md:h-2 bg-white/50 rounded w-3/4"></div>
+        <div className="h-1 sm:h-1.5 md:h-2 bg-white/50 rounded w-1/2"></div>
       </div>
-      <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-[#FF6B6B] rounded-lg flex items-center justify-center text-white text-xs">▶</div>
+      <div className="absolute -bottom-1 -left-1 sm:-bottom-1.5 sm:-left-1.5 md:-bottom-2 md:-left-2 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-[#FF6B6B] rounded-lg flex items-center justify-center text-white text-[8px] sm:text-[10px] md:text-xs">▶</div>
     </div>
-    <div className="absolute top-4 right-8 w-12 h-12 bg-[#FFB347] rounded-lg transform rotate-12 animate-float"></div>
-    <div className="absolute top-0 left-12 w-8 h-8 bg-[#FF6B6B] rounded-full animate-float-delayed"></div>
-    <div className="absolute bottom-4 left-4 w-8 h-12 bg-gray-800 rounded-full"></div>
+    <div className="absolute top-2 right-4 sm:top-3 sm:right-6 md:top-4 md:right-8 w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 bg-[#FFB347] rounded-lg transform rotate-12 animate-float"></div>
+    <div className="absolute top-0 left-6 sm:left-8 md:left-12 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-[#FF6B6B] rounded-full animate-float-delayed"></div>
+    <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 md:bottom-4 md:left-4 w-4 h-6 sm:w-6 sm:h-8 md:w-8 md:h-12 bg-gray-800 rounded-full"></div>
   </div>
 );
 
 export const MobileAppIcon = () => (
-  <div className="relative w-64 h-48">
-    <div className="absolute top-8 right-8 w-24 h-24 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
-    <div className="absolute bottom-8 left-8 w-32 h-32 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
+  <div className="relative w-32 h-24 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 lg:h-48">
+    <div className="absolute top-2 right-2 sm:top-4 sm:right-4 md:top-8 md:right-8 w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
+    <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 md:bottom-8 md:left-8 w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <div className="bg-gray-800 rounded-lg w-44 h-32 shadow-2xl p-2">
-        <div className="bg-[#FF8C6B] rounded h-full w-full flex items-center justify-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#FFB347] to-[#FF8C6B]"></div>
-          <svg className="w-16 h-16 text-white z-10" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      {/* Mobile Phone Frame */}
+      <div className="bg-gray-900 rounded-2xl sm:rounded-3xl w-16 h-28 sm:w-24 sm:h-42 md:w-32 md:h-56 shadow-2xl p-1 sm:p-1.5 md:p-2 relative">
+        {/* Screen */}
+        <div className="bg-white rounded-xl sm:rounded-2xl h-full w-full flex items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#5EBEEB] to-[#3D9BD6]"></div>
+          {/* Mobile App Icon */}
+          <svg className="w-8 h-8 sm:w-12 sm:h-12 md:w-20 md:h-20 text-white z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+            <line x1="12" y1="18" x2="12.01" y2="18"/>
           </svg>
         </div>
+        {/* Home Button */}
+        <div className="absolute bottom-0.5 sm:bottom-1 left-1/2 transform -translate-x-1/2 w-4 sm:w-6 md:w-8 h-0.5 sm:h-0.5 md:h-1 bg-gray-700 rounded-full"></div>
       </div>
-      <div className="bg-gray-800 w-16 h-4 mx-auto mt-1"></div>
-      <div className="bg-gray-700 w-24 h-2 mx-auto mt-1 rounded"></div>
     </div>
-    <div className="absolute top-6 left-6 w-10 h-10 bg-[#FFB347] rounded-full animate-float"></div>
-    <div className="absolute top-2 right-12 w-8 h-8 bg-[#FF6B6B] rounded-full animate-float-delayed"></div>
-    <div className="absolute bottom-8 right-4 w-6 h-10 bg-gray-800 rounded-full"></div>
-    <div className="absolute bottom-8 left-8 w-6 h-10 bg-gray-800 rounded-full"></div>
+    {/* Floating Elements */}
+    <div className="absolute top-1 left-1 sm:top-3 sm:left-3 md:top-6 md:left-6 w-5 h-5 sm:w-7 sm:h-7 md:w-10 md:h-10 bg-[#FFB347] rounded-lg animate-float flex items-center justify-center">
+      <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <div className="absolute top-0 right-6 sm:top-1 sm:right-8 md:top-2 md:right-12 w-5 h-5 sm:w-7 sm:h-7 md:w-10 md:h-10 bg-[#FF6B6B] rounded-lg animate-float-delayed flex items-center justify-center">
+      <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+      </svg>
+    </div>
+    <div className="absolute bottom-1 right-1 sm:bottom-3 sm:right-3 md:bottom-6 md:right-6 w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 bg-[#5EBEEB] rounded-full animate-float flex items-center justify-center shadow-lg">
+      <svg className="w-3 h-3 sm:w-5 sm:h-5 md:w-7 md:h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+      </svg>
+    </div>
   </div>
 );
 
 export const GraphicDesignIcon = () => (
-  <div className="relative w-64 h-48">
-    <div className="absolute top-8 left-12 w-28 h-28 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
-    <div className="absolute bottom-8 right-12 w-32 h-32 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-4">
-      <div className="text-[#FF8C6B] text-7xl font-black transform -rotate-12 relative">
+  <div className="relative w-32 h-24 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 lg:h-48">
+    <div className="absolute top-2 left-6 sm:top-4 sm:left-8 md:top-8 md:left-12 w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
+    <div className="absolute bottom-2 right-6 sm:bottom-4 sm:right-8 md:bottom-8 md:right-12 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-1 sm:gap-2 md:gap-4">
+      <div className="text-[#FF8C6B] text-3xl sm:text-5xl md:text-7xl font-black transform -rotate-12 relative">
         3
-        <div className="absolute inset-0 text-[#FFB347] transform translate-x-1 translate-y-1 -z-10">3</div>
+        <div className="absolute inset-0 text-[#FFB347] transform translate-x-0.5 translate-y-0.5 sm:translate-x-1 sm:translate-y-1 -z-10">3</div>
       </div>
-      <div className="text-[#FF8C6B] text-7xl font-black transform rotate-6 relative">
+      <div className="text-[#FF8C6B] text-3xl sm:text-5xl md:text-7xl font-black transform rotate-6 relative">
         D
-        <div className="absolute inset-0 text-[#FFB347] transform translate-x-1 translate-y-1 -z-10">D</div>
+        <div className="absolute inset-0 text-[#FFB347] transform translate-x-0.5 translate-y-0.5 sm:translate-x-1 sm:translate-y-1 -z-10">D</div>
       </div>
     </div>
-    <div className="absolute top-4 right-8 w-10 h-10 bg-[#FF6B6B] rounded-full animate-float"></div>
-    <div className="absolute top-8 left-4 w-8 h-8 bg-[#FFB347] rounded-full animate-float-delayed"></div>
-    <div className="absolute bottom-4 right-4 w-6 h-10 bg-gray-800 rounded-full"></div>
-    <div className="absolute bottom-8 left-12 w-6 h-10 bg-gray-800 rounded-full"></div>
-    <div className="absolute bottom-2 left-8 bg-gray-800 w-16 h-12 rounded shadow-lg"></div>
-    <div className="absolute bottom-2 right-8 bg-gray-800 w-20 h-14 rounded shadow-lg"></div>
+    <div className="absolute top-2 right-4 sm:top-3 sm:right-6 md:top-4 md:right-8 w-5 h-5 sm:w-7 sm:h-7 md:w-10 md:h-10 bg-[#FF6B6B] rounded-full animate-float"></div>
+    <div className="absolute top-4 left-2 sm:top-6 sm:left-3 md:top-8 md:left-4 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-[#FFB347] rounded-full animate-float-delayed"></div>
+    <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 md:bottom-4 md:right-4 w-3 h-5 sm:w-4 sm:h-7 md:w-6 md:h-10 bg-gray-800 rounded-full"></div>
+    <div className="absolute bottom-4 left-6 sm:bottom-6 sm:left-8 md:bottom-8 md:left-12 w-3 h-5 sm:w-4 sm:h-7 md:w-6 md:h-10 bg-gray-800 rounded-full"></div>
+    <div className="absolute bottom-1 left-4 sm:bottom-1.5 sm:left-6 md:bottom-2 md:left-8 bg-gray-800 w-8 h-6 sm:w-12 sm:h-9 md:w-16 md:h-12 rounded shadow-lg"></div>
+    <div className="absolute bottom-1 right-4 sm:bottom-1.5 sm:right-6 md:bottom-2 md:right-8 bg-gray-800 w-10 h-7 sm:w-15 sm:h-10 md:w-20 md:h-14 rounded shadow-lg"></div>
   </div>
 );
 
 export const SEOIcon = () => (
-  <div className="relative w-64 h-48">
-    <div className="absolute top-8 left-8 w-24 h-24 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
-    <div className="absolute bottom-8 right-8 w-32 h-32 bg-[#FFB347] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
+  <div className="relative w-32 h-24 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 lg:h-48">
+    <div className="absolute top-2 left-2 sm:top-4 sm:left-4 md:top-8 md:left-8 w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
+    <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 md:bottom-8 md:right-8 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#FFB347] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <div className="bg-white rounded-xl w-44 h-32 shadow-xl p-4 border-4 border-[#FF8C6B]">
-        <div className="flex items-center gap-2 mb-3">
-          <div className="w-3 h-3 bg-[#FF6B6B] rounded-full"></div>
-          <div className="h-2 bg-gray-300 rounded flex-1"></div>
+      <div className="bg-white rounded-lg sm:rounded-xl w-22 h-16 sm:w-32 sm:h-24 md:w-44 md:h-32 shadow-xl p-2 sm:p-3 md:p-4 border-2 sm:border-3 md:border-4 border-[#FF8C6B]">
+        <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 mb-1.5 sm:mb-2 md:mb-3">
+          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-[#FF6B6B] rounded-full"></div>
+          <div className="h-1 sm:h-1.5 md:h-2 bg-gray-300 rounded flex-1"></div>
         </div>
-        <div className="space-y-2">
-          <div className="h-2 bg-[#FFB347] rounded w-full"></div>
-          <div className="h-2 bg-[#5EBEEB] rounded w-3/4"></div>
-          <div className="h-2 bg-gray-300 rounded w-1/2"></div>
+        <div className="space-y-1 sm:space-y-1.5 md:space-y-2">
+          <div className="h-1 sm:h-1.5 md:h-2 bg-[#FFB347] rounded w-full"></div>
+          <div className="h-1 sm:h-1.5 md:h-2 bg-[#5EBEEB] rounded w-3/4"></div>
+          <div className="h-1 sm:h-1.5 md:h-2 bg-gray-300 rounded w-1/2"></div>
         </div>
       </div>
     </div>
-    <div className="absolute top-2 right-4 w-10 h-10 bg-[#FF6B6B] rounded-full animate-float"></div>
-    <div className="absolute bottom-4 left-4 w-8 h-8 bg-[#FFB347] rounded-lg animate-float-delayed"></div>
+    <div className="absolute top-1 right-2 sm:top-1.5 sm:right-3 md:top-2 md:right-4 w-5 h-5 sm:w-7 sm:h-7 md:w-10 md:h-10 bg-[#FF6B6B] rounded-full animate-float"></div>
+    <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 md:bottom-4 md:left-4 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-[#FFB347] rounded-lg animate-float-delayed"></div>
   </div>
 );
 
 export const WebAppIcon = () => (
-  <div className="relative w-64 h-48">
-    <div className="absolute top-8 right-8 w-24 h-24 bg-[#FFB347] rounded-full opacity-30 blur-xl animate-pulse"></div>
-    <div className="absolute bottom-8 left-8 w-32 h-32 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
+  <div className="relative w-32 h-24 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 lg:h-48">
+    <div className="absolute top-2 right-2 sm:top-4 sm:right-4 md:top-8 md:right-8 w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 bg-[#FFB347] rounded-full opacity-30 blur-xl animate-pulse"></div>
+    <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 md:bottom-8 md:left-8 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <div className="bg-gray-800 rounded-2xl w-48 h-32 shadow-xl p-3">
-        <div className="flex gap-1 mb-2">
-          <div className="w-2 h-2 bg-[#FF6B6B] rounded-full"></div>
-          <div className="w-2 h-2 bg-[#FFB347] rounded-full"></div>
-          <div className="w-2 h-2 bg-[#5EBEEB] rounded-full"></div>
+      <div className="bg-gray-800 rounded-xl sm:rounded-2xl w-24 h-16 sm:w-36 sm:h-24 md:w-48 md:h-32 shadow-xl p-1.5 sm:p-2 md:p-3">
+        <div className="flex gap-0.5 sm:gap-0.5 md:gap-1 mb-1 sm:mb-1.5 md:mb-2">
+          <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-[#FF6B6B] rounded-full"></div>
+          <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-[#FFB347] rounded-full"></div>
+          <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 bg-[#5EBEEB] rounded-full"></div>
         </div>
-        <div className="grid grid-cols-3 gap-2">
-          <div className="bg-[#FF8C6B] rounded h-14"></div>
-          <div className="bg-[#FFB347] rounded h-14"></div>
-          <div className="bg-[#5EBEEB] rounded h-14"></div>
+        <div className="grid grid-cols-3 gap-1 sm:gap-1.5 md:gap-2">
+          <div className="bg-[#FF8C6B] rounded h-7 sm:h-10 md:h-14"></div>
+          <div className="bg-[#FFB347] rounded h-7 sm:h-10 md:h-14"></div>
+          <div className="bg-[#5EBEEB] rounded h-7 sm:h-10 md:h-14"></div>
         </div>
       </div>
     </div>
-    <div className="absolute top-4 left-4 w-12 h-12 bg-[#FF6B6B] rounded-lg animate-float"></div>
-    <div className="absolute bottom-4 right-4 w-8 h-8 bg-[#5EBEEB] rounded-full animate-float-delayed"></div>
+    <div className="absolute top-2 left-2 sm:top-3 sm:left-3 md:top-4 md:left-4 w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 bg-[#FF6B6B] rounded-lg animate-float"></div>
+    <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 md:bottom-4 md:right-4 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-[#5EBEEB] rounded-full animate-float-delayed"></div>
   </div>
 );
 
 export const CMSIcon = () => (
-  <div className="relative w-64 h-48">
-    <div className="absolute top-8 left-12 w-28 h-28 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
-    <div className="absolute bottom-8 right-8 w-32 h-32 bg-[#FFB347] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
+  <div className="relative w-32 h-24 sm:w-48 sm:h-36 md:w-56 md:h-40 lg:w-64 lg:h-48">
+    <div className="absolute top-2 left-6 sm:top-4 sm:left-8 md:top-8 md:left-12 w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 bg-[#5EBEEB] rounded-full opacity-30 blur-xl animate-pulse"></div>
+    <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 md:bottom-8 md:right-8 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-[#FFB347] rounded-full opacity-30 blur-xl animate-pulse-delayed"></div>
     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <div className="bg-white rounded-xl w-44 h-32 shadow-xl p-3 border-2 border-gray-200">
-        <div className="flex justify-between items-center mb-2">
-          <div className="w-8 h-8 bg-[#5EBEEB] rounded flex items-center justify-center text-white font-bold text-xs">W</div>
-          <div className="flex gap-1">
-            <div className="w-6 h-6 bg-[#FFB347] rounded"></div>
-            <div className="w-6 h-6 bg-[#FF8C6B] rounded"></div>
+      <div className="bg-white rounded-lg sm:rounded-xl w-22 h-16 sm:w-32 sm:h-24 md:w-44 md:h-32 shadow-xl p-1.5 sm:p-2 md:p-3 border-1 sm:border-1.5 md:border-2 border-gray-200">
+        <div className="flex justify-between items-center mb-1 sm:mb-1.5 md:mb-2">
+          <div className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-[#5EBEEB] rounded flex items-center justify-center text-white font-bold text-[8px] sm:text-[10px] md:text-xs">W</div>
+          <div className="flex gap-0.5 sm:gap-0.5 md:gap-1">
+            <div className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 bg-[#FFB347] rounded"></div>
+            <div className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6 bg-[#FF8C6B] rounded"></div>
           </div>
         </div>
-        <div className="space-y-2">
-          <div className="h-2 bg-gray-200 rounded"></div>
-          <div className="h-2 bg-gray-200 rounded w-2/3"></div>
-          <div className="flex gap-2 mt-3">
-            <div className="h-8 bg-[#5EBEEB] rounded flex-1"></div>
-            <div className="h-8 bg-[#FF8C6B] rounded flex-1"></div>
+        <div className="space-y-1 sm:space-y-1.5 md:space-y-2">
+          <div className="h-1 sm:h-1.5 md:h-2 bg-gray-200 rounded"></div>
+          <div className="h-1 sm:h-1.5 md:h-2 bg-gray-200 rounded w-2/3"></div>
+          <div className="flex gap-1 sm:gap-1.5 md:gap-2 mt-1.5 sm:mt-2 md:mt-3">
+            <div className="h-4 sm:h-6 md:h-8 bg-[#5EBEEB] rounded flex-1"></div>
+            <div className="h-4 sm:h-6 md:h-8 bg-[#FF8C6B] rounded flex-1"></div>
           </div>
         </div>
       </div>
     </div>
-    <div className="absolute top-6 right-6 w-10 h-10 bg-[#FFB347] rounded-full animate-float"></div>
-    <div className="absolute bottom-6 left-6 w-8 h-8 bg-[#FF6B6B] rounded-lg animate-float-delayed"></div>
+    <div className="absolute top-1 right-1 sm:top-3 sm:right-3 md:top-6 md:right-6 w-5 h-5 sm:w-7 sm:h-7 md:w-10 md:h-10 bg-[#FFB347] rounded-full animate-float"></div>
+    <div className="absolute bottom-1 left-1 sm:bottom-3 sm:left-3 md:bottom-6 md:left-6 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-[#FF6B6B] rounded-lg animate-float-delayed"></div>
   </div>
 );
 
@@ -277,6 +294,69 @@ export const servicesData: Service[] = [
       starting: '$999',
       note: 'Pricing varies based on project complexity, number of pages, and custom features required.'
     },
+    pricingPlans: [
+      {
+        name: 'Basic Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        ),
+        price: 9,
+        period: 'mo',
+        features: [
+          { text: '1 Website Design Project', included: true },
+          { text: 'Up to 5 Pages', included: true },
+          { text: 'Responsive Design', included: true },
+          { text: 'Basic SEO Setup', included: true },
+          { text: 'Contact Form Integration', included: true },
+          { text: '2 Design Revisions', included: true },
+          { text: 'Custom Animations', included: false },
+          { text: 'Priority Support', included: false },
+        ],
+      },
+      {
+        name: 'Premium Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+        ),
+        price: 19,
+        period: 'mo',
+        features: [
+          { text: 'Up to 3 Design Projects', included: true },
+          { text: 'Up to 15 Pages', included: true },
+          { text: 'Responsive Design', included: true },
+          { text: 'Advanced SEO Optimization', included: true },
+          { text: 'Custom Animations', included: true },
+          { text: '5 Design Revisions', included: true },
+          { text: 'CMS Integration', included: true },
+          { text: 'Priority Email Support', included: true },
+        ],
+        highlighted: true,
+      },
+      {
+        name: 'Corporate Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        ),
+        price: 49,
+        period: 'mo',
+        features: [
+          { text: 'Unlimited Projects', included: true },
+          { text: 'Unlimited Pages', included: true },
+          { text: 'Premium Responsive Design', included: true },
+          { text: 'Enterprise SEO Package', included: true },
+          { text: 'Advanced Animations & Effects', included: true },
+          { text: 'Unlimited Revisions', included: true },
+          { text: 'Custom CMS Development', included: true },
+          { text: '24/7 Dedicated Support', included: true },
+        ],
+      },
+    ],
     faqs: [
       {
         question: 'How long does it take to design a website?',
@@ -375,6 +455,69 @@ export const servicesData: Service[] = [
       starting: '$499/month',
       note: 'Pricing varies based on the scope of services, competition level, and campaign objectives. Custom packages available.'
     },
+    pricingPlans: [
+      {
+        name: 'Basic Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        ),
+        price: 15,
+        period: 'mo',
+        features: [
+          { text: 'Basic SEO Audit', included: true },
+          { text: 'Up to 10 Keywords Optimization', included: true },
+          { text: 'On-Page SEO', included: true },
+          { text: 'Monthly Reports', included: true },
+          { text: 'Social Media Setup', included: true },
+          { text: 'Google My Business Setup', included: true },
+          { text: 'Link Building Campaign', included: false },
+          { text: 'PPC Management', included: false },
+        ],
+      },
+      {
+        name: 'Premium Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        ),
+        price: 29,
+        period: 'mo',
+        features: [
+          { text: 'Comprehensive SEO Audit', included: true },
+          { text: 'Up to 25 Keywords Optimization', included: true },
+          { text: 'On-Page & Technical SEO', included: true },
+          { text: 'Monthly Link Building (15 links)', included: true },
+          { text: 'Social Media Management (3 platforms)', included: true },
+          { text: 'Content Marketing (2 posts/month)', included: true },
+          { text: 'Weekly Performance Reports', included: true },
+          { text: 'Email Marketing Setup', included: true },
+        ],
+        highlighted: true,
+      },
+      {
+        name: 'Corporate Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+        ),
+        price: 59,
+        period: 'mo',
+        features: [
+          { text: 'Enterprise SEO Strategy', included: true },
+          { text: 'Unlimited Keywords Optimization', included: true },
+          { text: 'Full Technical SEO Implementation', included: true },
+          { text: 'Aggressive Link Building (40+ links/month)', included: true },
+          { text: 'Multi-Platform Social Media Management', included: true },
+          { text: 'Content Marketing (8 posts/month)', included: true },
+          { text: 'PPC Campaign Management ($2000 ad spend)', included: true },
+          { text: 'Dedicated Account Manager & 24/7 Support', included: true },
+        ],
+      },
+    ],
     faqs: [
       {
         question: 'How long does it take to see SEO results?',
@@ -532,6 +675,69 @@ export const servicesData: Service[] = [
       starting: '$5,000',
       note: 'Pricing depends on app complexity, features, platforms, and design requirements. Contact us for a detailed quote.'
     },
+    pricingPlans: [
+      {
+        name: 'Basic Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        ),
+        price: 25,
+        period: 'mo',
+        features: [
+          { text: '1 Simple Mobile App', included: true },
+          { text: 'Single Platform (iOS or Android)', included: true },
+          { text: 'Basic UI/UX Design', included: true },
+          { text: 'Up to 5 App Screens', included: true },
+          { text: 'Basic Features & Functionality', included: true },
+          { text: 'App Store Submission', included: true },
+          { text: 'Push Notifications', included: false },
+          { text: '3 Months Support', included: false },
+        ],
+      },
+      {
+        name: 'Premium Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        ),
+        price: 45,
+        period: 'mo',
+        features: [
+          { text: '1 Cross-Platform App', included: true },
+          { text: 'Both iOS & Android', included: true },
+          { text: 'Custom UI/UX Design', included: true },
+          { text: 'Up to 15 App Screens', included: true },
+          { text: 'Advanced Features (Auth, Payments)', included: true },
+          { text: 'Push Notifications & Analytics', included: true },
+          { text: 'App Store & Play Store Submission', included: true },
+          { text: '6 Months Support & Updates', included: true },
+        ],
+        highlighted: true,
+      },
+      {
+        name: 'Corporate Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+          </svg>
+        ),
+        price: 89,
+        period: 'mo',
+        features: [
+          { text: 'Complex Enterprise App', included: true },
+          { text: 'Native iOS & Android Apps', included: true },
+          { text: 'Premium Custom Design', included: true },
+          { text: 'Unlimited Screens', included: true },
+          { text: 'Full Backend & API Integration', included: true },
+          { text: 'Advanced Features (AI, AR, etc.)', included: true },
+          { text: 'Real-time Data & Cloud Integration', included: true },
+          { text: '12 Months Premium Support', included: true },
+        ],
+      },
+    ],
     faqs: [
       {
         question: 'How long does it take to develop a mobile app?',
@@ -632,6 +838,69 @@ export const servicesData: Service[] = [
       starting: '$199',
       note: 'Pricing varies by project type and complexity. Logo design starts at $499, while multimedia projects are quoted individually.'
     },
+    pricingPlans: [
+      {
+        name: 'Basic Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+          </svg>
+        ),
+        price: 12,
+        period: 'mo',
+        features: [
+          { text: '5 Graphic Design Projects/Month', included: true },
+          { text: 'Logo Design (1 concept)', included: true },
+          { text: 'Social Media Graphics', included: true },
+          { text: 'Business Card Design', included: true },
+          { text: '2 Revisions per Project', included: true },
+          { text: 'Source Files Included', included: true },
+          { text: 'Video Editing', included: false },
+          { text: 'Priority Support', included: false },
+        ],
+      },
+      {
+        name: 'Premium Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        ),
+        price: 28,
+        period: 'mo',
+        features: [
+          { text: '15 Graphic Design Projects/Month', included: true },
+          { text: 'Logo Design (3 concepts)', included: true },
+          { text: 'Complete Brand Identity Package', included: true },
+          { text: 'Print & Digital Design', included: true },
+          { text: 'Unlimited Revisions', included: true },
+          { text: 'All Source Files & Formats', included: true },
+          { text: 'Basic Video Editing (2 videos/month)', included: true },
+          { text: 'Priority Email Support', included: true },
+        ],
+        highlighted: true,
+      },
+      {
+        name: 'Corporate Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+          </svg>
+        ),
+        price: 55,
+        period: 'mo',
+        features: [
+          { text: 'Unlimited Design Projects', included: true },
+          { text: 'Complete Brand Development', included: true },
+          { text: 'Motion Graphics & Animations', included: true },
+          { text: '3D Design & Rendering', included: true },
+          { text: 'Video Production (5 videos/month)', included: true },
+          { text: 'All Premium Features', included: true },
+          { text: 'Dedicated Designer', included: true },
+          { text: '24/7 Priority Support', included: true },
+        ],
+      },
+    ],
     faqs: [
       {
         question: 'How many design concepts will I receive?',
@@ -792,6 +1061,69 @@ export const servicesData: Service[] = [
       starting: '$8,000',
       note: 'Pricing depends on application complexity, features, integrations, and timeline. Enterprise solutions are quoted based on specific requirements.'
     },
+    pricingPlans: [
+      {
+        name: 'Basic Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        ),
+        price: 35,
+        period: 'mo',
+        features: [
+          { text: 'Simple Web Application', included: true },
+          { text: 'Up to 5 User Roles', included: true },
+          { text: 'Basic Database Design', included: true },
+          { text: 'User Authentication', included: true },
+          { text: 'REST API Development', included: true },
+          { text: '3 Months Support', included: true },
+          { text: 'Advanced Integrations', included: false },
+          { text: 'Scalable Architecture', included: false },
+        ],
+      },
+      {
+        name: 'Premium Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+        ),
+        price: 69,
+        period: 'mo',
+        features: [
+          { text: 'Complex Web Application', included: true },
+          { text: 'Unlimited User Roles & Permissions', included: true },
+          { text: 'Advanced Database Architecture', included: true },
+          { text: 'Payment Gateway Integration', included: true },
+          { text: 'REST & GraphQL APIs', included: true },
+          { text: 'Third-party Integrations', included: true },
+          { text: 'Real-time Features', included: true },
+          { text: '6 Months Premium Support', included: true },
+        ],
+        highlighted: true,
+      },
+      {
+        name: 'Corporate Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+          </svg>
+        ),
+        price: 129,
+        period: 'mo',
+        features: [
+          { text: 'Enterprise-Grade Application', included: true },
+          { text: 'Multi-tenant Architecture', included: true },
+          { text: 'Microservices Architecture', included: true },
+          { text: 'Advanced Security & Compliance', included: true },
+          { text: 'Custom Workflow Automation', included: true },
+          { text: 'Machine Learning Integration', included: true },
+          { text: 'Scalable Cloud Infrastructure', included: true },
+          { text: 'Dedicated Team & 24/7 Support', included: true },
+        ],
+      },
+    ],
     faqs: [
       {
         question: 'What is the difference between a website and a web application?',
@@ -951,6 +1283,69 @@ export const servicesData: Service[] = [
       starting: '$3,000',
       note: 'Pricing varies based on cloud platform, infrastructure complexity, migration scope, and ongoing management requirements. Custom quotes provided.'
     },
+    pricingPlans: [
+      {
+        name: 'Basic Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          </svg>
+        ),
+        price: 20,
+        period: 'mo',
+        features: [
+          { text: 'Cloud Setup & Configuration', included: true },
+          { text: 'Single Cloud Platform', included: true },
+          { text: 'Basic Infrastructure Design', included: true },
+          { text: 'Up to 5 Services/Resources', included: true },
+          { text: 'Basic Monitoring', included: true },
+          { text: 'Monthly Reports', included: true },
+          { text: 'Advanced Security', included: false },
+          { text: '24/7 Support', included: false },
+        ],
+      },
+      {
+        name: 'Premium Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          </svg>
+        ),
+        price: 42,
+        period: 'mo',
+        features: [
+          { text: 'Multi-Cloud Strategy', included: true },
+          { text: 'Advanced Infrastructure Architecture', included: true },
+          { text: 'Cloud Migration Services', included: true },
+          { text: 'Auto-scaling & Load Balancing', included: true },
+          { text: 'Advanced Security & Compliance', included: true },
+          { text: 'Cost Optimization', included: true },
+          { text: 'Disaster Recovery Setup', included: true },
+          { text: 'Business Hours Support', included: true },
+        ],
+        highlighted: true,
+      },
+      {
+        name: 'Corporate Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          </svg>
+        ),
+        price: 79,
+        period: 'mo',
+        features: [
+          { text: 'Enterprise Cloud Architecture', included: true },
+          { text: 'Multi-Region Deployment', included: true },
+          { text: 'Complex Migration & Integration', included: true },
+          { text: 'Kubernetes & Container Orchestration', included: true },
+          { text: 'Enterprise Security & Governance', included: true },
+          { text: 'Advanced Monitoring & Analytics', included: true },
+          { text: 'Full Disaster Recovery & Backup', included: true },
+          { text: 'Dedicated Team & 24/7 Support', included: true },
+        ],
+      },
+    ],
     faqs: [
       {
         question: 'Which cloud platform should I choose?',
@@ -1100,6 +1495,69 @@ export const servicesData: Service[] = [
       starting: '$10,000',
       note: 'Pricing varies based on AI complexity, data volume, model requirements, and integration needs. Enterprise solutions quoted individually.'
     },
+    pricingPlans: [
+      {
+        name: 'Basic Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        ),
+        price: 50,
+        period: 'mo',
+        features: [
+          { text: 'Simple AI Chatbot', included: true },
+          { text: 'Basic RAG Implementation', included: true },
+          { text: 'Up to 1000 Documents', included: true },
+          { text: 'Standard AI Models', included: true },
+          { text: 'Web Integration', included: true },
+          { text: 'Basic Analytics', included: true },
+          { text: 'Custom AI Training', included: false },
+          { text: 'Multi-Agent System', included: false },
+        ],
+      },
+      {
+        name: 'Premium Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        ),
+        price: 99,
+        period: 'mo',
+        features: [
+          { text: 'Advanced AI Agent System', included: true },
+          { text: 'Custom RAG with Fine-tuning', included: true },
+          { text: 'Up to 10,000 Documents', included: true },
+          { text: 'Advanced AI Models (GPT-4, etc.)', included: true },
+          { text: 'Multi-Channel Integration', included: true },
+          { text: 'Advanced Analytics & Insights', included: true },
+          { text: 'Custom Model Training', included: true },
+          { text: 'API Access', included: true },
+        ],
+        highlighted: true,
+      },
+      {
+        name: 'Corporate Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+          </svg>
+        ),
+        price: 199,
+        period: 'mo',
+        features: [
+          { text: 'Enterprise Multi-Agent System', included: true },
+          { text: 'Custom AI Model Development', included: true },
+          { text: 'Unlimited Documents & Data', included: true },
+          { text: 'Proprietary AI Models', included: true },
+          { text: 'Enterprise Integrations', included: true },
+          { text: 'Workflow Automation', included: true },
+          { text: 'Advanced Security & Compliance', included: true },
+          { text: 'Dedicated AI Team & 24/7 Support', included: true },
+        ],
+      },
+    ],
     faqs: [
       {
         question: 'What is an AI agent?',
@@ -1258,6 +1716,69 @@ export const servicesData: Service[] = [
       starting: '$2,500',
       note: 'Consulting rates vary based on engagement type, duration, and complexity. We offer project-based, retainer, and hourly arrangements.'
     },
+    pricingPlans: [
+      {
+        name: 'Basic Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        ),
+        price: 18,
+        period: 'mo',
+        features: [
+          { text: 'Technology Assessment', included: true },
+          { text: 'Strategic Planning Session (2 hrs/month)', included: true },
+          { text: 'Architecture Review', included: true },
+          { text: 'Basic Tech Stack Recommendations', included: true },
+          { text: 'Email Support', included: true },
+          { text: 'Monthly Report', included: true },
+          { text: 'Code Review', included: false },
+          { text: 'On-demand Consulting', included: false },
+        ],
+      },
+      {
+        name: 'Premium Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        ),
+        price: 39,
+        period: 'mo',
+        features: [
+          { text: 'Fractional CTO Services (8 hrs/month)', included: true },
+          { text: 'Technology Strategy & Roadmap', included: true },
+          { text: 'Architecture Design & Review', included: true },
+          { text: 'Code Review & Best Practices', included: true },
+          { text: 'Team Leadership Guidance', included: true },
+          { text: 'Vendor Evaluation', included: true },
+          { text: 'Technical Due Diligence', included: true },
+          { text: 'Priority Support', included: true },
+        ],
+        highlighted: true,
+      },
+      {
+        name: 'Corporate Plan',
+        icon: (
+          <svg className="w-full h-full text-[#5EBEEB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+        ),
+        price: 89,
+        period: 'mo',
+        features: [
+          { text: 'Full-time Fractional CTO (20+ hrs/month)', included: true },
+          { text: 'Enterprise Technology Strategy', included: true },
+          { text: 'Digital Transformation Leadership', included: true },
+          { text: 'Complete Architecture Oversight', included: true },
+          { text: 'Team Building & Management', included: true },
+          { text: 'M&A Technical Due Diligence', included: true },
+          { text: 'Budget & Resource Planning', included: true },
+          { text: 'Dedicated Executive Support 24/7', included: true },
+        ],
+      },
+    ],
     faqs: [
       {
         question: 'What is a Fractional CTO?',

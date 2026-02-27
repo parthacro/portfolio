@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Logo } from '@/components/atoms/Logo';
 import { FooterLink } from '@/components/atoms/FooterLink';
 import { SocialIcon } from '@/components/atoms/SocialIcon';
@@ -9,28 +9,6 @@ import { NewsletterForm } from '@/components/molecules/NewsletterForm';
 import { Button } from '@/components/atoms/Button';
 
 export const Footer: React.FC = () => {
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const mobileMenuOpen = typeof window !== 'undefined' && (window as any).isMobileMenuOpen;
-      setIsMobileMenuOpen(mobileMenuOpen || false);
-      setShowScrollTop(window.scrollY > 500 && !mobileMenuOpen);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    const interval = setInterval(handleScroll, 100);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      clearInterval(interval);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="bg-[#3D4F5C] relative">
       {/* Wavy Top Border - Multiple flowing curves */}
@@ -40,9 +18,9 @@ export const Footer: React.FC = () => {
           viewBox="0 0 1440 120"
           preserveAspectRatio="none"
           fill="#3D4F5C"
-          style={{ height: '120px' }}
+          style={{ height: '80px', minHeight: '80px' }}
         >
-          <path d="M0,50 C120,20 180,80 300,50 C420,20 480,80 600,50 C720,20 780,80 900,50 C1020,20 1080,80 1200,50 C1320,20 1380,80 1440,50 L1440,120 L0,120 Z" />
+          <path d="M0,60 Q360,20 720,60 T1440,60 L1440,120 L0,120 Z" />
         </svg>
       </div>
 
@@ -164,19 +142,6 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Scroll to Top Button */}
-      {showScrollTop && !isMobileMenuOpen && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-[#5EBEEB] text-white rounded-full shadow-lg hover:bg-[#4AADE0] transition-all duration-300 flex items-center justify-center z-50 hover:shadow-xl hover:scale-110"
-          aria-label="Scroll to top"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
-        </button>
-      )}
     </footer>
   );
 };

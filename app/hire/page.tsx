@@ -5,6 +5,7 @@ import { PageTransition } from '@/components/atoms/PageTransition';
 import { SectionWrapper } from '@/components/atoms/SectionWrapper';
 import { HireHero } from '@/components/organisms/HireHero';
 import { HireForm } from '@/components/molecules/HireForm';
+import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 
 export default function HirePage() {
   return (
@@ -13,22 +14,26 @@ export default function HirePage() {
       <PageTransition>
         <main>
           {/* Hero Section */}
-          <SectionWrapper>
+          <SectionWrapper className="pt-24">
             <HireHero />
           </SectionWrapper>
           
           {/* Form Section */}
           <SectionWrapper className="bg-gray-50">
             <div className="max-w-4xl mx-auto px-2 sm:px-4">
-              <div className="text-center mb-8 sm:mb-12 px-2">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                  Tell Us About Your Project
-                </h2>
-                <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-                  Fill out the form below and we'll get back to you within 24 hours with a customized proposal
-                </p>
-              </div>
-              <HireForm />
+              <ScrollReveal variant="fadeUp" duration={0.7}>
+                <div className="text-center mb-8 sm:mb-12 px-2">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+                    Tell Us About Your Project
+                  </h2>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-2">
+                    Fill out the form below and we'll get back to you within 24 hours with a customized proposal
+                  </p>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal variant="fadeUp" delay={0.15} duration={0.7}>
+                <HireForm />
+              </ScrollReveal>
             </div>
           </SectionWrapper>
         </main>

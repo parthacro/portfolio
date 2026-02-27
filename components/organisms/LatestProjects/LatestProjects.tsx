@@ -2,6 +2,8 @@
 
 import React, { useRef } from 'react';
 import { ProjectCard } from '@/components/molecules/ProjectCard';
+import { projectsData } from '@/data/projects';
+import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 
 // Project mockup illustrations
 const MobileAppMockup = () => (
@@ -158,48 +160,14 @@ const VideoProductionMockup = () => (
 export const LatestProjects: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Select a Shop',
-      category: 'MOBILE APP',
-      image: <MobileAppMockup />
-    },
-    {
-      id: 2,
-      title: 'Dashboard & Analytics',
-      category: 'WEB DESIGN',
-      image: <WebDesignMockup />
-    },
-    {
-      id: 3,
-      title: 'Grocizy Grocery Delivery App',
-      category: 'MOBILE APP',
-      image: <HealthAppMockup />
-    },
-    {
-      id: 4,
-      title: 'Just My Roots Food Delivery App',
-      category: 'MOBILE APP',
-      image: <BrandingMockup />
-    },
-    {
-      id: 5,
-      title: 'Nutrition Center Fitness App',
-      category: 'MOBILE APP',
-      image: <MagazineMockup />
-    },
-    {
-      id: 6,
-      title: 'Aayam Career Institute Student App',
-      category: 'MOBILE APP',
-      image: <VideoProductionMockup />
-    }
-  ];
+  // Show all projects from the centralized data
+  const projects = projectsData;
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.clientWidth * 0.8;
+      // Scroll by the width of the container to show next set of cards
+      const containerWidth = scrollContainerRef.current.clientWidth;
+      const scrollAmount = containerWidth * 0.85; // Scroll most of the container width
       scrollContainerRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
@@ -215,30 +183,36 @@ export const LatestProjects: React.FC = () => {
 
       <div className="max-w-[1900px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">
-            LATEST PROJECTS
-          </p>
-          {/* <h2 className="text-xl sm:text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto px-4">
-            Check out some of our awesome projects<br className="hidden sm:block" />
-            with creative ideas and great design.
-          </h2> */}
-        </div>
+        <ScrollReveal variant="fadeUp" duration={0.7}>
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">
+              LATEST PROJECTS
+            </p>
+            {/* <h2 className="text-xl sm:text-xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto px-4">
+              Check out some of our awesome projects<br className="hidden sm:block" />
+              with creative ideas and great design.
+            </h2> */}
+          </div>
+        </ScrollReveal>
 
         {/* Projects Carousel */}
+        <ScrollReveal variant="fadeUp" delay={0.15} duration={0.7}>
         <div className="relative">
           <div 
             ref={scrollContainerRef}
-            className="flex gap-6 sm:gap-8 lg:gap-10 overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-2"
+            className="flex gap-3 sm:gap-6 md:gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-2"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                image={project.image}
-                title={project.title}
-                category={project.category}
-              />
+              <div key={project.id} className="flex-shrink-0 w-[calc(50%-0.375rem)] min-w-[160px] sm:w-[280px] md:w-[350px] lg:w-[400px]">
+                <ProjectCard
+                  slug={project.slug}
+                  image={project.image}
+                  title={project.title}
+                  category={project.category}
+                  description={project.description}
+                />
+              </div>
             ))}
           </div>
 
@@ -274,6 +248,7 @@ export const LatestProjects: React.FC = () => {
             </button>
           </div>
         </div>
+        </ScrollReveal>
       </div>
 
       <style jsx>{`
