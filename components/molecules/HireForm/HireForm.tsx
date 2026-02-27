@@ -1,44 +1,71 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Input } from '@/components/atoms/Input';
 import { TextArea } from '@/components/atoms/TextArea';
 import { Button } from '@/components/atoms/Button';
 
-const TECH_STACK = [
-  'React', 'Next.js', 'Vue.js', 'Angular',
-  'Node.js', 'Python', 'PHP', 'Java',
-  'React Native', 'Flutter', 'iOS', 'Android',
-  'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase',
-  'AWS', 'Azure', 'Docker', 'Kubernetes'
+const SERVICE_TYPES = [
+  { value: 'Full Stack Development', icon: '🖥️' },
+  { value: 'Frontend Development', icon: '🎨' },
+  { value: 'Backend Development', icon: '⚙️' },
+  { value: 'Mobile App Development', icon: '📱' },
+  { value: 'UI/UX Design', icon: '✏️' },
+  { value: 'DevOps & Cloud', icon: '☁️' },
+  { value: 'Consulting & Architecture', icon: '🏗️' },
+  { value: 'Maintenance & Support', icon: '🔧' },
 ];
 
-const SERVICE_TYPES = [
-  'Full Stack Development',
-  'Frontend Development',
-  'Backend Development',
-  'Mobile App Development',
-  'UI/UX Design',
-  'DevOps & Cloud',
-  'Consulting & Architecture',
-  'Maintenance & Support'
+const TECH_STACK_BY_SERVICE: Record<string, string[]> = {
+  'Full Stack Development': ['React', 'Next.js', 'Vue.js', 'Angular', 'Node.js', 'Python', 'PHP', 'Java', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'AWS', 'Docker'],
+  'Frontend Development': ['React', 'Next.js', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS', 'Sass', 'HTML5/CSS3'],
+  'Backend Development': ['Node.js', 'Python', 'PHP', 'Java', 'Go', 'PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'GraphQL', 'REST API'],
+  'Mobile App Development': ['React Native', 'Flutter', 'iOS (Swift)', 'Android (Kotlin)', 'Expo', 'Firebase'],
+  'UI/UX Design': ['Figma', 'Adobe XD', 'Sketch', 'Framer', 'Photoshop', 'Illustrator', 'Prototyping'],
+  'DevOps & Cloud': ['AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'Terraform', 'Linux'],
+  'Consulting & Architecture': ['System Design', 'Microservices', 'API Design', 'Database Design', 'Cloud Architecture', 'Security'],
+  'Maintenance & Support': ['Bug Fixes', 'Performance Optimization', 'Security Updates', 'Server Management', 'Monitoring', 'Migration'],
+};
+
+const DEV_OPTIONS_BY_SERVICE: Record<string, { value: string; label: string }[]> = {
+  'UI/UX Design': [
+    { value: '1', label: '1 Designer' },
+    { value: '2', label: '2 Designers' },
+    { value: '3-5', label: '3-5 Designers' },
+  ],
+  'Consulting & Architecture': [
+    { value: '1', label: '1 Consultant' },
+    { value: '2', label: '2 Consultants' },
+    { value: 'team', label: 'Full Team' },
+  ],
+};
+
+const DEFAULT_DEV_OPTIONS = [
+  { value: '1', label: '1 Dev' },
+  { value: '2', label: '2 Devs' },
+  { value: '3-5', label: '3-5 Devs' },
+  { value: '5-10', label: '5-10 Devs' },
+  { value: '10+', label: '10+' },
+  { value: 'team', label: 'Full Team' },
 ];
 
 const BUDGET_RANGES = [
-  'Under ₹50,000',
-  '₹50,000 - ₹1,00,000',
-  '₹1,00,000 - ₹2,50,000',
-  '₹2,50,000 - ₹5,00,000',
-  'Above ₹5,00,000'
+  { value: 'under-50k', label: 'Under ₹50K' },
+  { value: '50k-1L', label: '₹50K - ₹1L' },
+  { value: '1L-2.5L', label: '₹1L - ₹2.5L' },
+  { value: '2.5L-5L', label: '₹2.5L - ₹5L' },
+  { value: 'above-5L', label: 'Above ₹5L' },
 ];
 
 const PROJECT_TIMELINES = [
-  'Less than 1 month',
-  '1-3 months',
-  '3-6 months',
-  '6+ months',
-  'Ongoing/Long-term'
+  { value: 'lt-1m', label: '< 1 Month' },
+  { value: '1-3m', label: '1-3 Months' },
+  { value: '3-6m', label: '3-6 Months' },
+  { value: '6m+', label: '6+ Months' },
+  { value: 'ongoing', label: 'Ongoing' },
 ];
+
+const PLATFORM_OPTIONS = ['Web', 'iOS', 'Android', 'Cross-Platform', 'All Platforms'];
 
 export const HireForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -52,11 +79,33 @@ export const HireForm: React.FC = () => {
     projectDescription: '',
     budget: '',
     timeline: '',
+    platform: '',
     additionalRequirements: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const availableTechStack = useMemo(() => {
+    if (!formData.serviceType) return [];
+    return TECH_STACK_BY_SERVICE[formData.serviceType] || [];
+  }, [formData.serviceType]);
+
+  const devOptions = useMemo(() => {
+    return DEV_OPTIONS_BY_SERVICE[formData.serviceType] || DEFAULT_DEV_OPTIONS;
+  }, [formData.serviceType]);
+
+  const showPlatform = ['Full Stack Development', 'Mobile App Development', 'UI/UX Design'].includes(formData.serviceType);
+
+  const handleServiceSelect = (service: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      serviceType: service,
+      techStack: [],
+      numberOfDevelopers: '',
+      platform: '',
+    }));
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -78,13 +127,11 @@ export const HireForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    
+
     try {
       const response = await fetch('/api/hire', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
@@ -93,277 +140,264 @@ export const HireForm: React.FC = () => {
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          serviceType: '',
-          numberOfDevelopers: '',
-          techStack: [],
-          projectDescription: '',
-          budget: '',
-          timeline: '',
-          additionalRequirements: '',
+          name: '', email: '', phone: '', company: '', serviceType: '',
+          numberOfDevelopers: '', techStack: [], projectDescription: '',
+          budget: '', timeline: '', platform: '', additionalRequirements: '',
         });
-        
-        // Reset success message after 5 seconds
         setTimeout(() => setSubmitStatus('idle'), 5000);
       } else {
         setSubmitStatus('error');
         console.error('Error:', data.error);
-        
-        // Reset error message after 5 seconds
         setTimeout(() => setSubmitStatus('idle'), 5000);
       }
     } catch (error) {
       console.error('Failed to send message:', error);
       setSubmitStatus('error');
-      
-      // Reset error message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  /* Reusable pill button class */
+  const pillActive = 'bg-[#5EBEEB] text-white border-[#5EBEEB] shadow-sm';
+  const pillInactive = 'bg-white text-gray-600 border-gray-200 hover:border-[#5EBEEB]/50 hover:bg-[#EDF7FC]';
+
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-5xl mx-auto space-y-6 sm:space-y-8 px-2 sm:px-0 pb-16 sm:pb-20">
-      {/* Personal Information */}
-      <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
-        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">Personal Information</h3>
-        <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
-          <Input
-            id="name"
-            label="Full Name"
-            placeholder="Rahul Sharma"
-            required
-            value={formData.name}
-            onChange={handleChange}
-          />
-          
-          <Input
-            id="email"
-            label="Email Address"
-            type="email"
-            placeholder="rahul@example.com"
-            required
-            value={formData.email}
-            onChange={handleChange}
-          />
-          
-          <Input
-            id="phone"
-            label="Phone Number"
-            type="tel"
-            placeholder="+91 98765 43210"
-            required
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          
-          <Input
-            id="company"
-            label="Company Name (Optional)"
-            placeholder="Your Company"
-            value={formData.company}
-            onChange={handleChange}
-          />
+    <form onSubmit={handleSubmit} className="w-full max-w-4xl mx-auto space-y-4 sm:space-y-6 pb-16 sm:pb-20">
+      {/* Step 1: Personal Information */}
+      <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100 overflow-hidden">
+        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
+          <div className="w-6 h-6 sm:w-7 sm:h-7 bg-[#5EBEEB] rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold shrink-0">1</div>
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900">Personal Information</h3>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+          <Input id="name" label="Full Name" placeholder="Rahul Sharma" required value={formData.name} onChange={handleChange} />
+          <Input id="email" label="Email Address" type="email" placeholder="rahul@example.com" required value={formData.email} onChange={handleChange} />
+          <Input id="phone" label="Phone Number" type="tel" placeholder="+91 98765 43210" required value={formData.phone} onChange={handleChange} />
+          <Input id="company" label="Company (Optional)" placeholder="Your Company" value={formData.company} onChange={handleChange} />
         </div>
       </div>
 
-      {/* Project Details */}
-      <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
-        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">Project Details</h3>
-        
-        <div className="space-y-5">
-          {/* Service Type */}
-          <div>
-            <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 mb-2">
-              What service do you need? <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <select
-                id="serviceType"
-                required
-                value={formData.serviceType}
-                onChange={handleChange}
-                className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all text-gray-900 bg-white appearance-none cursor-pointer hover:border-gray-400"
-                style={{ backgroundImage: 'none' }}
-              >
-                <option value="" disabled>Select a service</option>
-                {SERVICE_TYPES.map((service) => (
-                  <option key={service} value={service}>
-                    {service}
-                  </option>
-                ))}
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
-                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-          </div>
+      {/* Step 2: Service Selection */}
+      <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100 overflow-hidden">
+        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
+          <div className="w-6 h-6 sm:w-7 sm:h-7 bg-[#5EBEEB] rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold shrink-0">2</div>
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900">What Do You Need?</h3>
+        </div>
 
-          {/* Number of Developers */}
+        <div className="space-y-4 sm:space-y-5">
+          {/* Service Type — button grid instead of native select */}
           <div>
-            <label htmlFor="numberOfDevelopers" className="block text-sm font-medium text-gray-700 mb-2">
-              How many developers do you need? <span className="text-red-500">*</span>
+            <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2 sm:mb-3">
+              Service Type <span className="text-red-500">*</span>
             </label>
-            <div className="relative">
-              <select
-                id="numberOfDevelopers"
-                required
-                value={formData.numberOfDevelopers}
-                onChange={handleChange}
-                className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all text-gray-900 bg-white appearance-none cursor-pointer hover:border-gray-400"
-                style={{ backgroundImage: 'none' }}
-              >
-                <option value="" disabled>Select number of developers</option>
-                <option value="1">1 Developer</option>
-                <option value="2">2 Developers</option>
-                <option value="3-5">3-5 Developers</option>
-                <option value="5-10">5-10 Developers</option>
-                <option value="10+">More than 10 Developers</option>
-                <option value="team">Full Development Team</option>
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
-                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Tech Stack */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-3">
-              Which technologies do you need? <span className="text-red-500">*</span>
-            </label>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-              {TECH_STACK.map((tech) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-2.5">
+              {SERVICE_TYPES.map(({ value, icon }) => (
                 <button
-                  key={tech}
+                  key={value}
                   type="button"
-                  onClick={() => handleTechStackToggle(tech)}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-                    formData.techStack.includes(tech)
-                      ? 'bg-indigo-600 text-white shadow-md'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  onClick={() => handleServiceSelect(value)}
+                  className={`flex items-center gap-1.5 sm:gap-2 px-2.5 py-2 sm:px-3 sm:py-2.5 rounded-lg text-[11px] sm:text-xs md:text-sm font-medium border transition-all text-left ${
+                    formData.serviceType === value ? pillActive : pillInactive
                   }`}
                 >
-                  {tech}
+                  <span className="text-sm sm:text-base shrink-0">{icon}</span>
+                  <span className="leading-tight">{value.replace(' Development', ' Dev').replace('Maintenance & Support', 'Maintenance').replace('Consulting & Architecture', 'Consulting')}</span>
                 </button>
               ))}
             </div>
-            {formData.techStack.length === 0 && (
-              <p className="text-xs text-gray-500 mt-2">Please select at least one technology</p>
-            )}
           </div>
 
-          {/* Project Description */}
-          <TextArea
-            id="projectDescription"
-            label="Project Description"
-            placeholder="Describe your project requirements, goals, and any specific features you need..."
-            required
-            rows={6}
-            value={formData.projectDescription}
-            onChange={handleChange}
-          />
+          {/* Conditional fields after service selection */}
+          {formData.serviceType && (
+            <div className="space-y-4 sm:space-y-5 pt-2">
+              {/* Selected service indicator */}
+              <div className="bg-[#EDF7FC] rounded-lg px-3 py-2 sm:px-4 sm:py-2.5 flex items-center gap-2">
+                <span className="text-[#5EBEEB] text-sm">✓</span>
+                <span className="text-xs sm:text-sm text-gray-700 font-medium">{formData.serviceType}</span>
+              </div>
 
-          {/* Budget & Timeline */}
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
-            <div>
-              <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                Project Budget <span className="text-red-500">*</span>
-              </label>
-              <div className="relative">
-                <select
-                  id="budget"
-                  required
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all text-gray-900 bg-white appearance-none cursor-pointer hover:border-gray-400"
-                  style={{ backgroundImage: 'none' }}
-                >
-                  <option value="" disabled>Select budget range</option>
-                  {BUDGET_RANGES.map((range) => (
-                    <option key={range} value={range}>
-                      {range}
-                    </option>
+              {/* Platform — only for certain services */}
+              {showPlatform && (
+                <div>
+                  <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2 sm:mb-2.5">
+                    Target Platform <span className="text-red-500">*</span>
+                  </label>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {PLATFORM_OPTIONS.map((p) => (
+                      <button
+                        key={p}
+                        type="button"
+                        onClick={() => setFormData((prev) => ({ ...prev, platform: p }))}
+                        className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all border ${
+                          formData.platform === p ? pillActive : pillInactive
+                        }`}
+                      >
+                        {p}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Team Size — pill buttons instead of native select */}
+              <div>
+                <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2 sm:mb-2.5">
+                  Team Size <span className="text-red-500">*</span>
+                </label>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                  {devOptions.map((opt) => (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      onClick={() => setFormData((prev) => ({ ...prev, numberOfDevelopers: opt.value }))}
+                      className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all border ${
+                        formData.numberOfDevelopers === opt.value ? pillActive : pillInactive
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
                   ))}
-                </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
-                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
                 </div>
               </div>
-            </div>
 
-            <div>
-              <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
-                Project Timeline <span className="text-red-500">*</span>
-              </label>
-              <div className="relative">
-                <select
-                  id="timeline"
-                  required
-                  value={formData.timeline}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 focus:outline-none transition-all text-gray-900 bg-white appearance-none cursor-pointer hover:border-gray-400"
-                  style={{ backgroundImage: 'none' }}
-                >
-                  <option value="" disabled>Select timeline</option>
-                  {PROJECT_TIMELINES.map((time) => (
-                    <option key={time} value={time}>
-                      {time}
-                    </option>
+              {/* Tech Stack */}
+              <div>
+                <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2 sm:mb-2.5">
+                  {formData.serviceType === 'UI/UX Design' ? 'Tools & Skills Needed' :
+                    formData.serviceType === 'Consulting & Architecture' ? 'Areas of Focus' :
+                      formData.serviceType === 'Maintenance & Support' ? 'Support Areas' : 'Technologies Needed'}
+                  {' '}<span className="text-red-500">*</span>
+                </label>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                  {availableTechStack.map((tech) => (
+                    <button
+                      key={tech}
+                      type="button"
+                      onClick={() => handleTechStackToggle(tech)}
+                      className={`px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                        formData.techStack.includes(tech)
+                          ? 'bg-[#5EBEEB] text-white shadow-sm'
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      }`}
+                    >
+                      {tech}
+                    </button>
                   ))}
-                </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
-                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
                 </div>
+                {formData.techStack.length === 0 && (
+                  <p className="text-[10px] sm:text-xs text-gray-400 mt-1.5">Select at least one</p>
+                )}
               </div>
             </div>
-          </div>
-
-          {/* Additional Requirements */}
-          <TextArea
-            id="additionalRequirements"
-            label="Additional Requirements (Optional)"
-            placeholder="Any other details, preferences, or questions you'd like to share..."
-            rows={4}
-            value={formData.additionalRequirements}
-            onChange={handleChange}
-          />
+          )}
         </div>
       </div>
 
+      {/* Step 3: Project Details — only shows after service selected */}
+      {formData.serviceType && (
+        <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100 overflow-hidden">
+          <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5">
+            <div className="w-6 h-6 sm:w-7 sm:h-7 bg-[#5EBEEB] rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold shrink-0">3</div>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-900">Project Details</h3>
+          </div>
+
+          <div className="space-y-4 sm:space-y-5">
+            <TextArea
+              id="projectDescription"
+              label="Project Description"
+              placeholder={
+                formData.serviceType === 'UI/UX Design'
+                  ? 'Describe the design project, target audience, brand guidelines...'
+                  : formData.serviceType === 'Mobile App Development'
+                    ? 'Describe app features, target platforms, user flows...'
+                    : formData.serviceType === 'Maintenance & Support'
+                      ? 'Describe current project, issues, and support needed...'
+                      : 'Describe your project requirements, goals, and features needed...'
+              }
+              required
+              rows={4}
+              value={formData.projectDescription}
+              onChange={handleChange}
+            />
+
+            {/* Budget — pill buttons */}
+            <div>
+              <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2 sm:mb-2.5">
+                Budget <span className="text-red-500">*</span>
+              </label>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                {BUDGET_RANGES.map((range) => (
+                  <button
+                    key={range.value}
+                    type="button"
+                    onClick={() => setFormData((prev) => ({ ...prev, budget: range.value }))}
+                    className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all border ${
+                      formData.budget === range.value ? pillActive : pillInactive
+                    }`}
+                  >
+                    {range.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Timeline — pill buttons */}
+            <div>
+              <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-2 sm:mb-2.5">
+                Timeline <span className="text-red-500">*</span>
+              </label>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                {PROJECT_TIMELINES.map((time) => (
+                  <button
+                    key={time.value}
+                    type="button"
+                    onClick={() => setFormData((prev) => ({ ...prev, timeline: time.value }))}
+                    className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all border ${
+                      formData.timeline === time.value ? pillActive : pillInactive
+                    }`}
+                  >
+                    {time.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <TextArea
+              id="additionalRequirements"
+              label="Additional Notes (Optional)"
+              placeholder="Any other details or questions..."
+              rows={3}
+              value={formData.additionalRequirements}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Submit */}
       <Button
         variant="primary"
         type="submit"
         className="w-full"
-        disabled={isSubmitting || formData.techStack.length === 0}
+        disabled={isSubmitting || !formData.serviceType || formData.techStack.length === 0}
       >
         {isSubmitting ? 'Sending Request...' : 'Submit Hiring Request'}
       </Button>
-      
+
       {submitStatus === 'success' && (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-          <p className="text-green-800 text-center text-sm sm:text-base">
-            ✓ Your hiring request has been received! We'll review it and get back to you within 24 hours.
+        <div className="bg-green-50 border border-green-200 rounded-lg p-3 sm:p-4">
+          <p className="text-green-800 text-center text-xs sm:text-sm">
+            ✓ Your hiring request has been received! We&apos;ll get back to you within 24 hours.
           </p>
         </div>
       )}
-      
+
       {submitStatus === 'error' && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-          <p className="text-red-800 text-center text-sm sm:text-base">
-            ✗ Failed to submit request. Please try again or contact us directly at career24x7growth@gmail.com
+        <div className="bg-red-50 border border-red-200 rounded-lg p-3 sm:p-4">
+          <p className="text-red-800 text-center text-xs sm:text-sm">
+            ✗ Failed to submit. Please try again or email us at career24x7growth@gmail.com
           </p>
         </div>
       )}

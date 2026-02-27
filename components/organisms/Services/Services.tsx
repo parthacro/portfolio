@@ -1,6 +1,7 @@
 import React from 'react';
 import { SectionHeading } from '@/components/atoms/SectionHeading';
 import { ServiceCard } from '@/components/molecules/ServiceCard';
+import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 
 const WebDesignIcon = () => (
   <div className="relative w-64 h-48">
@@ -124,20 +125,23 @@ export const Services: React.FC = () => {
       </div>
 
       <div className="max-w-[1900px] mx-auto relative">
-        <SectionHeading 
-          preTitle="WHAT WE DO?"
-          title="The service we offer is specifically designed to meet your needs."
-        />
+        <ScrollReveal variant="fadeUp" duration={0.7}>
+          <SectionHeading 
+            preTitle="WHAT WE DO?"
+            title="The service we offer is specifically designed to meet your needs."
+          />
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
-          {services.map((service) => (
-            <ServiceCard
-              key={service.title}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              href={service.href}
-            />
+          {services.map((service, index) => (
+            <ScrollReveal key={service.title} variant="fadeUp" delay={index * 0.15} duration={0.6}>
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                href={service.href}
+              />
+            </ScrollReveal>
           ))}
         </div>
       </div>

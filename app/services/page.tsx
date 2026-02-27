@@ -4,6 +4,7 @@ import { Footer } from '@/components/organisms/Footer';
 import { SectionHeading } from '@/components/atoms/SectionHeading';
 import { ServiceCard } from '@/components/molecules/ServiceCard';
 import { servicesData, getServiceIcon } from '@/data/services';
+import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="relative py-16 sm:py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#EDF7FC] to-white pb-32 sm:pb-36 md:pb-40">
+        <section className="relative pt-28 sm:pt-32 md:pt-36 pb-32 sm:pb-36 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#EDF7FC] to-white">
           {/* Wavy top border */}
           <div className="absolute top-0 left-0 right-0 overflow-hidden h-16 sm:h-20 md:h-24">
             <svg 
@@ -31,22 +32,25 @@ export default function ServicesPage() {
           </div>
 
           <div className="max-w-[1900px] mx-auto relative">
-            <SectionHeading 
-              preTitle="WHAT WE DO?"
-              title="The service we offer is specifically designed to meet your needs."
-            />
+            <ScrollReveal variant="fadeUp" duration={0.7}>
+              <SectionHeading 
+                preTitle="WHAT WE DO?"
+                title="The service we offer is specifically designed to meet your needs."
+              />
+            </ScrollReveal>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
-              {servicesData.map((service) => {
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-16">
+              {servicesData.map((service, index) => {
                 const IconComponent = getServiceIcon(service.icon);
                 return (
-                  <ServiceCard
-                    key={service.id}
-                    title={service.title}
-                    description={service.shortDescription}
-                    icon={IconComponent ? <IconComponent /> : null}
-                    href={`/services/${service.slug}`}
-                  />
+                  <ScrollReveal key={service.id} variant="fadeUp" delay={index * 0.1} duration={0.6}>
+                    <ServiceCard
+                      title={service.title}
+                      description={service.shortDescription}
+                      icon={IconComponent ? <IconComponent /> : null}
+                      href={`/services/${service.slug}`}
+                    />
+                  </ScrollReveal>
                 );
               })}
             </div>

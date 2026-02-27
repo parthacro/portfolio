@@ -22,6 +22,17 @@ export interface Service {
     starting: string;
     note?: string;
   };
+  pricingPlans?: {
+    name: string;
+    icon: React.ReactNode;
+    price: number;
+    period: string;
+    features: {
+      text: string;
+      included: boolean;
+    }[];
+    highlighted?: boolean;
+  }[];
   faqs: {
     question: string;
     answer: string;

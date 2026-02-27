@@ -1,22 +1,27 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Service } from '@/types/service';
 import { CheckmarkItem } from '@/components/atoms/CheckmarkItem';
 import { StepCard } from '@/components/molecules/StepCard';
 import { SectionHeading } from '@/components/atoms/SectionHeading';
 import { Button } from '@/components/atoms/Button';
 import { ServiceTypeCard } from '@/components/atoms/ServiceTypeCard';
+import { PricingCard } from '@/components/molecules/PricingCard';
+import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 import Link from 'next/link';
 
 interface ServiceDetailProps {
   service: Service;
-  icon: React.ReactNode;
 }
 
-export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, icon }) => {
+export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#EDF7FC] to-white">
-      {/* Back Button - Hidden on mobile, visible on tablet+ */}
-      <div className="hidden md:block pt-24 pb-4 px-4 sm:px-6 lg:px-8">
+      {/* Back Button */}
+      <div className="pt-24 pb-0 px-4 sm:px-6 lg:px-8">
         <Link 
           href="/services"
           className="inline-flex items-center gap-2 text-gray-700 hover:text-[#5EBEEB] transition-colors group font-medium"
@@ -39,53 +44,37 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, icon }) =
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-0 w-64 h-64 sm:w-80 sm:h-80 bg-[#5EBEEB]/10 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-64 sm:h-64 bg-[#5EBEEB]/5 rounded-full blur-3xl -z-10" />
+
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div>
-              <div className="inline-block bg-[#5EBEEB]/10 text-[#5EBEEB] px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                OUR SERVICES
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <ScrollReveal variant="fadeUp" duration={0.7}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                 {service.title}
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+            </ScrollReveal>
+            <ScrollReveal variant="fadeUp" delay={0.12} duration={0.7}>
+              <p className="text-base sm:text-lg md:text-xl text-gray-500 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto">
                 {service.fullDescription}
               </p>
-              <div className="flex flex-wrap gap-4">
+            </ScrollReveal>
+            <ScrollReveal variant="fadeUp" delay={0.24} duration={0.7}>
+              <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
                 <Link href="/contact">
-                  <Button variant="primary" size="lg">
+                  <Button variant="primary" size="sm">
                     Get Started
                   </Button>
                 </Link>
                 <Link href="/hire">
-                  <Button variant="secondary" size="lg">
+                  <Button variant="secondary" size="sm">
                     Hire Us
                   </Button>
                 </Link>
               </div>
-              {service.pricing && (
-                <div className="mt-8 p-6 bg-white rounded-xl shadow-md border border-gray-100">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-gray-600">Starting from</span>
-                    <span className="text-3xl font-bold text-[#5EBEEB]">
-                      {service.pricing.starting}
-                    </span>
-                  </div>
-                  {service.pricing.note && (
-                    <p className="text-sm text-gray-500 mt-2">{service.pricing.note}</p>
-                  )}
-                </div>
-              )}
-            </div>
-
-            {/* Right Icon */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="transform hover:scale-105 transition-transform duration-300">
-                {icon}
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -94,18 +83,21 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, icon }) =
       {service.serviceTypes && service.serviceTypes.length > 0 && (
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-[#EDF7FC]">
           <div className="max-w-7xl mx-auto">
-            <SectionHeading 
-              preTitle="SERVICE TYPES"
-              title={`${service.title} Services We Offer`}
-            />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ScrollReveal variant="fadeUp" duration={0.7}>
+              <SectionHeading 
+                preTitle="SERVICE TYPES"
+                title={`${service.title} Services We Offer`}
+              />
+            </ScrollReveal>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {service.serviceTypes.map((serviceType, index) => (
-                <ServiceTypeCard
-                  key={index}
-                  icon={serviceType.icon}
-                  title={serviceType.title}
-                  description={serviceType.description}
-                />
+                <ScrollReveal key={index} variant="fadeUp" delay={index * 0.1} duration={0.6}>
+                  <ServiceTypeCard
+                    icon={serviceType.icon}
+                    title={serviceType.title}
+                    description={serviceType.description}
+                  />
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -115,35 +107,41 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, icon }) =
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading 
-            preTitle="FEATURES"
-            title="What's Included"
-          />
+          <ScrollReveal variant="fadeUp" duration={0.7}>
+            <SectionHeading 
+              preTitle="FEATURES"
+              title="What's Included"
+            />
+          </ScrollReveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {service.features.map((feature, index) => (
-              <CheckmarkItem key={index} text={feature} />
+              <ScrollReveal key={index} variant="fadeUp" delay={(index % 3) * 0.1} duration={0.6}>
+                <CheckmarkItem text={feature} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-[#EDF7FC]">
+      <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-[#EDF7FC]">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading 
-            preTitle="BENEFITS"
-            title="Why Choose This Service"
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ScrollReveal variant="fadeUp" duration={0.7}>
+            <SectionHeading 
+              preTitle="BENEFITS"
+              title="Why Choose This Service"
+            />
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {service.benefits.map((benefit, index) => (
+              <ScrollReveal key={index} variant="fadeUp" delay={(index % 3) * 0.1} duration={0.6}>
               <div 
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+                className="bg-white p-3 sm:p-4 md:p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#5EBEEB]/10 rounded-full flex items-center justify-center">
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 bg-[#5EBEEB]/10 rounded-full flex items-center justify-center">
                     <svg 
-                      className="w-6 h-6 text-[#5EBEEB]" 
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-[#5EBEEB]" 
                       fill="none" 
                       viewBox="0 0 24 24" 
                       stroke="currentColor"
@@ -152,13 +150,14 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, icon }) =
                         strokeLinecap="round" 
                         strokeLinejoin="round" 
                         strokeWidth={2} 
-                        d="M13 10V3L4 14h7v7l9-11h-7z" 
+                        d="M5 13l4 4L19 7" 
                       />
                     </svg>
                   </div>
-                  <p className="text-gray-700 font-medium">{benefit}</p>
+                  <p className="text-sm sm:text-base text-gray-700 font-medium">{benefit}</p>
                 </div>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -166,66 +165,124 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, icon }) =
 
       {/* Technologies Section */}
       {service.technologies && service.technologies.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#EDF7FC]">
+        <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 bg-[#EDF7FC]">
           <div className="max-w-7xl mx-auto">
+            <ScrollReveal variant="fadeUp" duration={0.7}>
+              <SectionHeading 
+                preTitle="TECHNOLOGIES"
+                title="Tools & Technologies We Use"
+              />
+            </ScrollReveal>
+            <ScrollReveal variant="fadeUp" delay={0.15} duration={0.7}>
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-2xl mx-auto">
+                {service.technologies.map((tech, index) => (
+                  <div 
+                    key={index}
+                    className="bg-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-[#5EBEEB]/30"
+                  >
+                    <span className="text-xs sm:text-sm text-gray-700 font-medium">{tech}</span>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {/* Process Steps Section */}
+      <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <ScrollReveal variant="fadeUp" duration={0.7}>
             <SectionHeading 
-              preTitle="TECHNOLOGIES"
-              title="Tools & Technologies We Use"
+              preTitle="OUR PROCESS"
+              title="How We Work"
             />
-            <div className="flex flex-wrap justify-center gap-4">
-              {service.technologies.map((tech, index) => (
-                <div 
-                  key={index}
-                  className="bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
-                >
-                  <span className="text-gray-700 font-medium">{tech}</span>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            {service.processSteps.map((step, index) => (
+              <ScrollReveal key={step.step} variant="fadeUp" delay={(index % 3) * 0.12} duration={0.6}>
+                <StepCard
+                  number={step.step}
+                  title={step.title}
+                  description={step.description}
+                />
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Plans Section */}
+      {service.pricingPlans && service.pricingPlans.length > 0 && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#EDF7FC] to-white">
+          <div className="max-w-7xl mx-auto">
+            <ScrollReveal variant="fadeUp" duration={0.7}>
+              <SectionHeading 
+                preTitle="PRICING PLANS"
+                title="Choose the Perfect Plan for Your Needs"
+              />
+            </ScrollReveal>
+            <div className="flex gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 overflow-x-auto pb-4 pt-6 px-1 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              {service.pricingPlans.map((plan, index) => (
+                <ScrollReveal key={index} variant="fadeUp" delay={index * 0.12} duration={0.6}>
+                <div className="flex-shrink-0 w-[250px] sm:w-[280px] md:w-auto md:flex-1 snap-center">
+                  <PricingCard
+                    plan={plan}
+                    serviceSlug={service.slug}
+                    serviceTitle={service.title}
+                  />
                 </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
         </section>
       )}
 
-      {/* Process Steps Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading 
-            preTitle="OUR PROCESS"
-            title="How We Work"
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {service.processSteps.map((step) => (
-              <StepCard
-                key={step.step}
-                number={step.step}
-                title={step.title}
-                description={step.description}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQs Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-[#EDF7FC]" style={{paddingBottom: '10rem'}}>
         <div className="max-w-4xl mx-auto">
-          <SectionHeading 
-            preTitle="FAQs"
-            title="Frequently Asked Questions"
-          />
-          <div className="space-y-6">
+          <ScrollReveal variant="fadeUp" duration={0.7}>
+            <SectionHeading 
+              preTitle="FAQs"
+              title="Frequently Asked Questions"
+            />
+          </ScrollReveal>
+          <div className="space-y-4">
             {service.faqs.map((faq, index) => (
+              <ScrollReveal key={index} variant="fadeUp" delay={index * 0.08} duration={0.6}>
               <div 
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
+                className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {faq.answer}
-                </p>
+                <button
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  className="w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-gray-50 transition-colors"
+                >
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 pr-4">
+                    {faq.question}
+                  </h3>
+                  <svg
+                    className={`w-5 h-5 sm:w-6 sm:h-6 text-[#5EBEEB] transition-transform duration-300 flex-shrink-0 ${
+                      openFaqIndex === index ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openFaqIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <p className="px-5 sm:px-6 pb-5 sm:pb-6 text-sm sm:text-base text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

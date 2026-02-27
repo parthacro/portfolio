@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Header } from '@/components/organisms/Header';
 import { Footer } from '@/components/organisms/Footer';
 import { ServiceDetail } from '@/components/organisms/ServiceDetail';
-import { servicesData, getServiceBySlug, getServiceIcon } from '@/data/services';
+import { servicesData, getServiceBySlug } from '@/data/services';
 
 // Force static generation - no dynamic behavior
 export const dynamic = 'force-static';
@@ -62,16 +62,12 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
     notFound();
   }
 
-  // Get the icon component from hardcoded data
-  const IconComponent = getServiceIcon(service.icon);
-
   return (
     <div className="min-h-screen">
       <Header />
       <main>
         <ServiceDetail 
           service={service} 
-          icon={IconComponent ? <IconComponent /> : null} 
         />
       </main>
       <Footer />

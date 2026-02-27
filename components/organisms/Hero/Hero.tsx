@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/atoms/Button";
+import { ScrollReveal } from "@/components/atoms/ScrollReveal";
 
 export const Hero: React.FC = () => {
   return (
@@ -9,26 +10,32 @@ export const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left order-2 lg:order-1 px-2 sm:px-0">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-5 md:mb-6">
-              Instant Solutions{" "}
-              <span className="text-[#5EBEEB]">for Your Idea!</span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-7 md:mb-8 max-w-xl mx-auto lg:mx-0">
-              Hexaloop is a global leading software products and services
-              company. We provide wide range of services in various areas.
-            </p>
-            <div className="flex justify-center lg:justify-start">
-              <Button href="#get-started">Get Started</Button>
-            </div>
+            <ScrollReveal variant="fadeLeft" duration={0.7}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-5 md:mb-6">
+                Instant Solutions{" "}
+                <span className="text-[#5EBEEB]">for Your Idea!</span>
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal variant="fadeLeft" delay={0.15} duration={0.7}>
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-7 md:mb-8 max-w-xl mx-auto lg:mx-0">
+                Hexaloop is a global leading software products and services
+                company. We provide wide range of services in various areas.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal variant="fadeUp" delay={0.3} duration={0.7}>
+              <div className="flex justify-center lg:justify-start">
+                <Button href="#get-started">Get Started</Button>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Right Illustration */}
-          <div className="relative order-1 lg:order-2 mt-4 sm:mt-0">
-            <div className="relative w-full aspect-square max-w-sm sm:max-w-md lg:max-w-xl mx-auto">
+          <ScrollReveal variant="fadeRight" delay={0.2} duration={0.8} className="relative order-1 lg:order-2 mt-4 sm:mt-0">
+            <div className="relative w-full aspect-square max-w-[280px] sm:max-w-md lg:max-w-xl mx-auto">
               {/* Decorative Elements */}
-              <div className="absolute top-4 left-4 sm:top-10 sm:left-10 w-10 h-10 sm:w-16 sm:h-16 bg-[#FFB347] rounded-full animate-float"></div>
-              <div className="absolute top-12 right-12 sm:top-20 sm:right-20 w-8 h-8 sm:w-12 sm:h-12 bg-[#FF6B6B] rounded-full animate-float-delayed"></div>
-              <div className="absolute -top-2 right-16 sm:-top-5 sm:right-32 w-14 h-6 sm:w-20 sm:h-8 bg-[#FFB347] rounded-full transform -rotate-12 animate-float"></div>
+              <div className="absolute top-4 left-4 sm:top-10 sm:left-10 w-8 h-8 sm:w-16 sm:h-16 bg-[#FFB347] rounded-full animate-float"></div>
+              <div className="absolute top-12 right-12 sm:top-20 sm:right-20 w-6 h-6 sm:w-12 sm:h-12 bg-[#FF6B6B] rounded-full animate-float-delayed"></div>
+              <div className="absolute -top-2 right-16 sm:-top-5 sm:right-32 w-12 h-5 sm:w-20 sm:h-8 bg-[#FFB347] rounded-full transform -rotate-12 animate-float"></div>
 
               {/* Blue Blobs */}
               <div className="absolute top-1/4 left-0 w-24 h-24 sm:w-40 sm:h-40 bg-[#5EBEEB] rounded-full opacity-30 blur-2xl animate-pulse"></div>
@@ -78,7 +85,7 @@ export const Hero: React.FC = () => {
               <div className="absolute bottom-20 left-8 w-12 h-16 bg-gray-800 rounded-full animate-bounce-slow"></div>
               <div className="absolute bottom-0 right-8 w-12 h-16 bg-gray-800 rounded-full animate-bounce-slow"></div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
       </div>

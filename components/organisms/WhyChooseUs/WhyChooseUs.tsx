@@ -3,9 +3,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { AccordionItem } from '@/components/molecules/AccordionItem';
+import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 
 const WhyChooseUsIllustration = () => (
-  <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] mb-8 sm:mb-10 md:mb-0 flex items-center justify-center">
+  <div className="relative w-full max-w-[220px] sm:max-w-xs md:max-w-md mx-auto h-[200px] sm:h-[280px] md:h-[380px] mb-6 sm:mb-8 md:mb-0 flex items-center justify-center">
     <Image
       src="/icons/why-choose-us-icon.png"
       alt="Why Choose Us"
@@ -36,37 +37,43 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 lg:px-8 pb-20 sm:pb-24 md:pb-32 bg-gradient-to-b from-white to-[#F8FCFF] relative overflow-hidden">
+    <section className="pt-8 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-[#F8FCFF] relative overflow-hidden" style={{paddingBottom: '10rem'}}>
       {/* Background decorative elements */}
       <div className="absolute top-32 right-20 w-48 h-48 sm:w-64 sm:h-64 bg-[#5EBEEB]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-32 left-20 w-48 h-48 sm:w-64 sm:h-64 bg-[#FFB347]/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-[1900px] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
-          {/* Left Illustration */}
-          <div className="order-2 lg:order-1 px-4 sm:px-0">
-            <WhyChooseUsIllustration />
-          </div>
-
-          {/* Right Content */}
-          <div className="order-1 lg:order-2 px-2 sm:px-0">
-            <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4 text-center lg:text-left">
+        {/* Header Section - Always on top for mobile */}
+        <ScrollReveal variant="fadeUp" duration={0.7}>
+          <div className="text-center lg:text-left mb-5 sm:mb-6 md:mb-8 px-2 sm:px-0">
+            <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">
               WHY CHOOSE US?
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-8 md:mb-12 leading-tight text-center lg:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-5 md:mb-6 leading-tight">
               We bring solutions to make life easier.
             </h2>
+          </div>
+        </ScrollReveal>
 
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+          {/* Left Illustration */}
+          <ScrollReveal variant="fadeLeft" delay={0.1} duration={0.8} className="order-1 lg:order-1 px-4 sm:px-0">
+            <WhyChooseUsIllustration />
+          </ScrollReveal>
+
+          {/* Right Content - Accordion */}
+          <div className="order-2 lg:order-2 px-2 sm:px-0">
             {/* Accordion */}
-            <div className="space-y-0">
+            <div className="space-y-0 relative z-10">
               {features.map((feature, index) => (
-                <AccordionItem
-                  key={index}
-                  title={feature.title}
-                  content={feature.content}
-                  isOpen={openIndex === index}
-                  onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
-                />
+                <ScrollReveal key={index} variant="fadeRight" delay={index * 0.12} duration={0.6}>
+                  <AccordionItem
+                    title={feature.title}
+                    content={feature.content}
+                    isOpen={openIndex === index}
+                    onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
+                  />
+                </ScrollReveal>
               ))}
             </div>
           </div>

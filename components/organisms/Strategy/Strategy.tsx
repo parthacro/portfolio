@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FeatureItem } from '@/components/molecules/FeatureItem';
+import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 
 const HowItWorksIllustration = () => (
   <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg mx-auto h-[350px] sm:h-[400px] md:h-[450px] flex items-center justify-center">
@@ -340,28 +341,31 @@ export const Strategy: React.FC = () => {
         <div className="max-w-[1900px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
             {/* Left Illustration */}
-            <div className="order-2 lg:order-1">
+            <ScrollReveal variant="fadeLeft" duration={0.8} className="order-2 lg:order-1">
               <HowItWorksIllustration />
-            </div>
+            </ScrollReveal>
 
             {/* Right Content */}
             <div className="order-1 lg:order-2 px-2 sm:px-0">
-              <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">
-                HOW IT WORKS?
-              </p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 sm:mb-10 md:mb-12 leading-tight">
-                Everything you need on creating a business process.
-              </h2>
+              <ScrollReveal variant="fadeRight" duration={0.7}>
+                <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">
+                  HOW IT WORKS?
+                </p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 sm:mb-10 md:mb-12 leading-tight">
+                  Everything you need on creating a business process.
+                </h2>
+              </ScrollReveal>
 
               {/* Features List */}
               <div className="space-y-6 md:space-y-8">
                 {features.map((feature, index) => (
-                  <FeatureItem
-                    key={index}
-                    icon={feature.icon}
-                    title={feature.title}
-                    description={feature.description}
-                  />
+                  <ScrollReveal key={index} variant="fadeRight" delay={index * 0.15} duration={0.6}>
+                    <FeatureItem
+                      icon={feature.icon}
+                      title={feature.title}
+                      description={feature.description}
+                    />
+                  </ScrollReveal>
                 ))}
               </div>
             </div>
@@ -389,16 +393,19 @@ export const Strategy: React.FC = () => {
         <div className="absolute bottom-20 left-20 w-64 h-64 bg-purple-100 rounded-full opacity-30 blur-3xl"></div>
 
         <div className="max-w-[1900px] mx-auto">
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">
-              OUR EXPERTISE
-            </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              Technologies We Work With
-            </h2>
-          </div>
+          <ScrollReveal variant="fadeUp" duration={0.7}>
+            <div className="text-center mb-12 sm:mb-16 md:mb-20">
+              <p className="text-[#5EBEEB] text-xs sm:text-sm md:text-base font-semibold tracking-wide uppercase mb-3 sm:mb-4">
+                OUR EXPERTISE
+              </p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                Technologies We Work With
+              </h2>
+            </div>
+          </ScrollReveal>
 
           {/* Technologies Scroll Container */}
+          <ScrollReveal variant="fadeUp" delay={0.2} duration={0.7}>
           <div className="relative">
             <div ref={scrollContainerRef} className="overflow-x-auto hide-scrollbar">
               <div className="flex gap-8 md:gap-12 lg:gap-16 pb-4 min-w-max px-4">
@@ -420,21 +427,22 @@ export const Strategy: React.FC = () => {
           {/* Scroll Progress Indicator */}
           <div className="mt-12 flex flex-col items-center gap-4">
             {/* Scrollbar Track */}
-            <div className="relative w-full max-w-2xl h-0.5 bg-gray-300 rounded-full">
+            <div className="relative w-[60%] sm:w-[70%] md:w-full max-w-2xl h-0.5 bg-gray-300 rounded-full">
               {/* Scrollbar Thumb */}
               <div 
-                className="absolute top-1/2 -translate-y-1/2 h-1 w-16 bg-[#5EBEEB] rounded-full transition-all duration-300 ease-out"
+                className="absolute top-1/2 -translate-y-1/2 h-1 w-12 sm:w-14 md:w-16 bg-[#5EBEEB] rounded-full transition-all duration-300 ease-out"
                 style={{ left: `calc(${scrollProgress}% - 32px)` }}
               />
             </div>
             {/* Helper Text */}
-            <p className="text-sm text-gray-500 flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <p className="text-xs sm:text-sm text-gray-500 flex items-center gap-2">
+              <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
               Scroll to explore more technologies
             </p>
           </div>
+          </ScrollReveal>
 
           <style jsx>{`
             .hide-scrollbar::-webkit-scrollbar {
