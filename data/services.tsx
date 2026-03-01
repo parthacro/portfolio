@@ -379,9 +379,9 @@ export const servicesData: Service[] = [
         answer: 'Yes, we can integrate a user-friendly CMS (Content Management System) that allows you to easily update content, images, and other elements without technical knowledge.'
       }
     ],
-    metaTitle: 'Professional Website Design Services | Custom Web Design',
-    metaDescription: 'Get stunning, responsive website design services that drive results. We create custom, user-friendly websites tailored to your brand and business goals. Contact us today!',
-    metaKeywords: ['website design', 'web design services', 'custom web design', 'responsive design', 'UI/UX design', 'professional website design']
+    metaTitle: 'Professional Website Design & Development Services in Indore | Hexaloop',
+    metaDescription: 'Best website design company in Indore. Custom website development for businesses, startups & enterprises. Responsive web design, ecommerce websites, website redesign. ₹25,000-₹2,50,000. 9+ years experience, 100+ projects. Affordable website design in Indore.',
+    metaKeywords: ['professional website design services', 'custom website development for businesses', 'website design company in Indore', 'best web developers in Indore', 'best web development company in Indore', 'ecommerce website developer Indore', 'website development company near me', 'affordable website design in Indore', 'website redesign company Indore', 'top 10 web design companies in Indore', 'responsive website design for startups', 'enterprise website solutions worldwide', 'startup-friendly web design in Indore', 'Indore custom website development services', 'IT company Indore for website solutions', 'hire professional website designers for startups', 'custom websites for small businesses in Indore', 'how much does website design cost in Indore', 'affordable responsive websites for Indian businesses', 'Indore-based business website design experts']
   },
   {
     id: '2',
@@ -540,9 +540,9 @@ export const servicesData: Service[] = [
         answer: 'Yes, we provide detailed monthly reports showing your rankings, traffic, conversions, and other key metrics. We also schedule regular calls to discuss progress and strategy adjustments.'
       }
     ],
-    metaTitle: 'SEO & Digital Marketing Services | Increase Your Online Visibility',
-    metaDescription: 'Boost your online presence with expert SEO and digital marketing services. Drive more traffic, generate leads, and grow your business with our proven strategies.',
-    metaKeywords: ['SEO services', 'digital marketing', 'search engine optimization', 'online marketing', 'PPC management', 'social media marketing', 'content marketing']
+    metaTitle: 'SEO & Digital Marketing Agency in Indore | Best SEO Company Indore | Hexaloop',
+    metaDescription: 'Top SEO company in Indore & digital marketing agency. Expert SEO services, Google Ads, social media marketing, PPC management & lead generation. ₹15,000-₹1,50,000/month. Transparent reporting & measurable results. Local SEO for Indore businesses.',
+    metaKeywords: ['SEO services for startups & enterprises', 'digital marketing agency worldwide', 'SEO company in Indore', 'digital marketing services Indore', 'digital marketing agency in Indore', 'Indore SEO experts for startups', 'local SEO for Indore companies', 'Google Ads agency Indore', 'best digital marketing company Indore', 'Facebook advertising Indore', 'Instagram marketing Indore', 'SEO freelancer Indore', 'lead generation company Indore', 'hire digital marketing experts for small business growth', 'affordable SEO services for Indore startups', 'social media marketing for Indore enterprises', 'best digital marketing company for startups in India', 'SEO company for doctor clinic in Indore', 'how much does SEO cost in Indore', 'amazon product listing optimization India']
   },
   {
     id: '3',
@@ -760,9 +760,9 @@ export const servicesData: Service[] = [
         answer: 'Absolutely! We handle the entire app store submission process for both Apple App Store and Google Play Store, including preparing assets, descriptions, and navigating the review process.'
       }
     ],
-    metaTitle: 'Mobile App Development Services | iOS & Android App Development',
-    metaDescription: 'Professional mobile app development for iOS and Android. We build custom, high-performance mobile applications that engage users and drive business growth.',
-    metaKeywords: ['mobile app development', 'iOS app development', 'Android app development', 'cross-platform apps', 'React Native', 'Flutter', 'custom mobile apps']
+    metaTitle: 'Mobile App Development Company in Indore | iOS & Android App Developers | Hexaloop',
+    metaDescription: 'Best mobile app development company in Indore. Custom iOS & Android apps for startups & enterprises. Cross-platform app development, React Native, Flutter. ₹50,000-₹5,00,000. Quick development cycles, post-launch support. 100+ apps delivered.',
+    metaKeywords: ['mobile app development services', 'Android & iOS app development worldwide', 'enterprise mobile solutions', 'app development for startups', 'mobile app developers in Indore', 'Indore mobile application development company', 'mobile app development company Indore', 'Android app developer Indore', 'startup mobile app solutions Indore', 'Indore enterprise app development services', 'hire app developers for startups in India', 'custom mobile app solutions for SMEs', 'affordable mobile app development in Indore', 'cross-platform app development for businesses', 'Indore-based mobile app experts for enterprises']
   },
   {
     id: '4',
@@ -923,9 +923,9 @@ export const servicesData: Service[] = [
         answer: 'While we don\'t print in-house, we can recommend trusted printing partners and prepare print-ready files with proper specifications to ensure the best quality output.'
       }
     ],
-    metaTitle: 'Graphic Design & Multimedia Services | Professional Design Solutions',
-    metaDescription: 'Creative graphic design services including logo design, branding, print design, and multimedia production. Transform your brand with stunning visual designs.',
-    metaKeywords: ['graphic design', 'logo design', 'branding', 'brochure design', 'multimedia design', 'motion graphics', '3D design', 'video editing']
+    metaTitle: 'Graphic Design & Multimedia Services in Indore | Logo, Branding & Creative Design | Hexaloop',
+    metaDescription: 'Professional graphic design agency in Indore. Logo design, branding, brochure design, multimedia design, motion graphics & corporate identity. ₹10,000-₹1,00,000. Fast turnaround, affordable pricing for startups & SMEs. Indian cultural elements & modern design.',
+    metaKeywords: ['graphic design services for businesses', 'multimedia design company worldwide', 'branding & visual design services', 'graphic designers in Indore', 'multimedia design agency Indore', 'branding services for Indore businesses', 'Indore logo & brochure design company', 'Indore visual design experts', 'hire professional graphic designers in Indore', 'multimedia design for startups & SMEs', 'affordable branding & design solutions', 'corporate identity design services Indore', 'creative visuals for marketing campaigns', 'marketing graphics & creatives']
   },
   {
     id: '5',
@@ -1146,9 +1146,9 @@ export const servicesData: Service[] = [
         answer: 'Yes, we offer hosting solutions and ongoing maintenance packages including updates, bug fixes, security patches, performance monitoring, and feature enhancements.'
       }
     ],
-    metaTitle: 'Custom Software Development | Enterprise Software Solutions',
-    metaDescription: 'Professional custom software development services. We build tailored enterprise solutions, SaaS platforms, and business automation tools that drive growth and efficiency.',
-    metaKeywords: ['custom software development', 'enterprise software', 'SaaS development', 'business automation', 'API development', 'legacy system modernization', 'data analytics platform']
+    metaTitle: 'Custom Software Development Company in Indore | Enterprise Solutions | Hexaloop',
+    metaDescription: 'Leading software development company in Indore. Custom ERP, CRM, SaaS, business automation software. ₹2,50,000-₹20,00,000. Quick prototyping & MVP development for startups. Scalable enterprise solutions for manufacturing, healthcare, logistics & retail.',
+    metaKeywords: ['custom software development services', 'enterprise software solutions worldwide', 'business automation software', 'SaaS & cloud software development', 'software development company in Indore', 'Indore custom business software', 'enterprise software developers Indore', 'startup-friendly software solutions Indore', 'Indore IT solutions for businesses', 'hire software developers for business automation', 'custom ERP & CRM solutions for SMEs', 'affordable software development for startups', 'Indore software experts for enterprise solutions', 'SaaS product development for Indian businesses']
   },
   {
     id: '6',
@@ -1368,9 +1368,9 @@ export const servicesData: Service[] = [
         answer: 'Yes, cloud platforms offer enterprise-grade security. We implement encryption, access controls, compliance frameworks, and monitoring to ensure your data is secure and meets industry regulations.'
       }
     ],
-    metaTitle: 'Cloud Solutions Services | AWS, Azure, Google Cloud',
-    metaDescription: 'Expert cloud solutions including migration, cloud-native development, infrastructure management, DevOps, and cost optimization. Transform your business with scalable cloud technology.',
-    metaKeywords: ['cloud solutions', 'cloud migration', 'AWS', 'Azure', 'Google Cloud', 'DevOps', 'cloud infrastructure', 'Kubernetes', 'cloud security']
+    metaTitle: 'Cloud Solutions & Migration Services in Indore | AWS, Azure, Google Cloud | Hexaloop',
+    metaDescription: 'Cloud solution providers in Indore. Cloud migration, hosting, AWS, Azure, Google Cloud, DevOps & infrastructure management. ₹50,000-₹10,00,000. Hybrid cloud solutions for SMEs, compliance with Indian IT regulations. Scalable cloud for startups & enterprises.',
+    metaKeywords: ['cloud computing services for enterprises', 'cloud migration & deployment solutions', 'SaaS & IaaS services worldwide', 'scalable cloud infrastructure for startups', 'cloud solution providers in Indore', 'Indore IT cloud services', 'business cloud migration Indore', 'Indore enterprise cloud solutions', 'startup cloud hosting Indore', 'affordable cloud hosting & migration for SMEs', 'cloud infrastructure management for startups', 'Indore-based cloud consulting company', 'secure cloud services for Indian enterprises', 'scalable cloud solutions for global businesses']
   },
   {
     id: '7',
@@ -1580,9 +1580,9 @@ export const servicesData: Service[] = [
         answer: 'We implement guardrails, validation layers, human-in-the-loop workflows where needed, and comprehensive testing. We also monitor AI performance continuously and refine systems based on real-world usage.'
       }
     ],
-    metaTitle: 'Agentic AI Solutions | Custom AI Agents & Automation',
-    metaDescription: 'Transform your business with custom AI agents, intelligent chatbots, RAG systems, and AI-powered automation. Expert AI development and consulting services.',
-    metaKeywords: ['AI agents', 'artificial intelligence', 'chatbot development', 'RAG system', 'AI automation', 'machine learning', 'NLP', 'generative AI', 'LLM integration']
+    metaTitle: 'Agentic AI Solutions & Development Company in Indore | AI Automation | Hexaloop',
+    metaDescription: 'AI solutions company in Indore. Custom AI agents, chatbot development, machine learning, predictive analytics & AI-driven automation. ₹1,00,000-₹25,00,000. AI adoption guidance for non-tech companies. Serving manufacturing, e-commerce, healthcare, legal & CA firms.',
+    metaKeywords: ['AI solutions for business automation', 'machine learning services worldwide', 'agentic AI development services', 'AI automation agency', 'AI solutions provider Indore', 'AI consulting for Indore businesses', 'AI solutions company Indore', 'AI chatbot development Indore', 'machine learning development in Indore', 'Indore AI-based automation services', 'hire AI developers for startups', 'custom AI tools for business optimization', 'affordable AI solutions for SMEs', 'Indore AI consulting company for enterprises', 'AI-driven analytics & automation services', 'predictive analytics & AI consulting', 'enterprise AI implementation']
   },
   {
     id: '8',
@@ -1801,9 +1801,9 @@ export const servicesData: Service[] = [
         answer: 'Absolutely. While consulting focuses on strategy and guidance, we can also provide implementation support or transition to development services to execute the plans we create together.'
       }
     ],
-    metaTitle: 'IT Consulting Services | Technology Strategy & Advisory',
-    metaDescription: 'Expert IT consulting including technology strategy, architecture consulting, fractional CTO services, technical due diligence, and digital transformation guidance.',
-    metaKeywords: ['IT consulting', 'technology strategy', 'fractional CTO', 'technical advisory', 'digital transformation', 'architecture consulting', 'technical due diligence', 'technology roadmap']
+    metaTitle: 'IT Consulting Services in Indore | Technology Strategy & Digital Transformation | Hexaloop',
+    metaDescription: 'IT consulting company in Indore. Technology strategy, digital transformation, architecture consulting, fractional CTO & IT advisory. ₹50,000-₹10,00,000. Startup-friendly IT advisory, scalable solutions for SMEs. Hands-on guidance for digital transformation.',
+    metaKeywords: ['IT consulting services for businesses', 'enterprise IT strategy solutions worldwide', 'technology advisory services', 'IT consulting company in Indore', 'Indore IT advisory services for businesses', 'technology consulting for Indore startups', 'IT strategy solutions Indore', 'Indore IT consulting experts', 'hire IT consultants for business growth', 'affordable IT advisory for startups & SMEs', 'IT strategy & implementation for enterprises', 'Indore IT experts for digital transformation', 'technology consulting solutions for Indian companies', 'startup IT consulting & support', 'IT project management services']
   }
 ];
 

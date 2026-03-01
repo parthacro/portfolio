@@ -35,12 +35,17 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
   }
 
   return {
-    title: `${project.title} - Our Projects | Hexaloop`,
+    title: `${project.title} - Portfolio | Hexaloop IT Company Indore`,
     description: project.detailedDescription,
+    alternates: {
+      canonical: `/projects/${slug}`,
+    },
     openGraph: {
-      title: `${project.title} - Our Projects`,
+      title: `${project.title} - Our Projects | Hexaloop`,
       description: project.detailedDescription,
+      url: `/projects/${slug}`,
       type: 'website',
+      siteName: 'Hexaloop',
     },
     twitter: {
       card: 'summary_large_image',
@@ -61,8 +66,22 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
     notFound();
   }
 
+  const projectBreadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hexaloop.in' },
+      { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://www.hexaloop.in/projects' },
+      { '@type': 'ListItem', position: 3, name: project.title, item: `https://www.hexaloop.in/projects/${slug}` },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectBreadcrumbJsonLd) }}
+      />
       <Header />
       <main>
         <ProjectDetail project={project} />

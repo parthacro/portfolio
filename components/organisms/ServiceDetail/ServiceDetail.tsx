@@ -222,7 +222,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
                 title="Choose the Perfect Plan for Your Needs"
               />
             </ScrollReveal>
-            <div className="flex gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 overflow-x-auto pb-4 pt-6 px-1 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            <div className="flex md:justify-center gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 overflow-x-auto pb-4 pt-6 px-1 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {service.pricingPlans.map((plan, index) => (
                 <ScrollReveal key={index} variant="fadeUp" delay={index * 0.12} duration={0.6}>
                 <div className="flex-shrink-0 w-[250px] sm:w-[280px] md:w-auto md:flex-1 snap-center">

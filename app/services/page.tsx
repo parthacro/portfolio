@@ -8,14 +8,51 @@ import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Services | Professional Web Development & Design Services',
-  description: 'We offer comprehensive web services including website design, mobile app development, SEO & digital marketing, graphic design, web applications, and CMS development.',
-  keywords: 'web design, mobile app development, SEO services, digital marketing, graphic design, web application development, CMS development',
+  title: 'Our Services - Website Design, Mobile Apps, SEO, AI & Cloud Solutions in Indore',
+  description: 'Hexaloop offers 8 comprehensive IT services: Website Design & Development, SEO & Digital Marketing, Mobile App Development, Graphics & Multimedia Design, Custom Software Development, Cloud Solutions, Agentic AI Solutions, and IT Consulting. Serving Indore, India & worldwide.',
+  keywords: [
+    'website design services Indore',
+    'mobile app development Indore',
+    'SEO services Indore',
+    'digital marketing agency Indore',
+    'graphic design services Indore',
+    'custom software development Indore',
+    'cloud solutions Indore',
+    'AI solutions Indore',
+    'IT consulting Indore',
+    'best web development company in Indore',
+    'IT company Indore services',
+    'professional website design services',
+    'enterprise website solutions worldwide',
+  ],
+  alternates: {
+    canonical: '/services',
+  },
+  openGraph: {
+    title: 'Our Services | Hexaloop - IT Company Indore',
+    description:
+      'Explore our comprehensive IT services: Web Design, Mobile Apps, SEO, Digital Marketing, Custom Software, Cloud, AI & IT Consulting. Affordable solutions for startups & enterprises.',
+    url: '/services',
+    type: 'website',
+  },
+};
+
+const servicesBreadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hexaloop.in' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.hexaloop.in/services' },
+  ],
 };
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesBreadcrumbJsonLd) }}
+      />
       <Header />
       <main>
         <section className="relative pt-28 sm:pt-32 md:pt-36 pb-32 sm:pb-36 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#EDF7FC] to-white">
@@ -35,7 +72,7 @@ export default function ServicesPage() {
             <ScrollReveal variant="fadeUp" duration={0.7}>
               <SectionHeading 
                 preTitle="WHAT WE DO?"
-                title="The service we offer is specifically designed to meet your needs."
+                title="Professional IT services designed to grow your business."
               />
             </ScrollReveal>
 

@@ -18,13 +18,16 @@ export const Hero: React.FC = () => {
             </ScrollReveal>
             <ScrollReveal variant="fadeLeft" delay={0.15} duration={0.7}>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-7 md:mb-8 max-w-xl mx-auto lg:mx-0">
-                Hexaloop is a global leading software products and services
-                company. We provide wide range of services in various areas.
+                Hexaloop is a leading IT company in Indore with 9+ years of
+                experience. We deliver website design, mobile app development,
+                SEO, custom software, cloud & AI solutions for startups and
+                enterprises worldwide.
               </p>
             </ScrollReveal>
             <ScrollReveal variant="fadeUp" delay={0.3} duration={0.7}>
-              <div className="flex justify-center lg:justify-start">
-                <Button href="#get-started">Get Started</Button>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                <Button href="/contact">Free Consultation</Button>
+                <Button href="/services" variant="secondary">Our Services</Button>
               </div>
             </ScrollReveal>
           </div>
