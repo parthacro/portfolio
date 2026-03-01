@@ -111,7 +111,7 @@ export const Services: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#EDF7FC] to-white pb-32 sm:pb-36 md:pb-40">
+    <section className="relative py-16 sm:py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#EDF7FC] to-white pb-32 sm:pb-36 md:pb-40" aria-label="Our Services">
       {/* Wavy top border */}
       <div className="absolute top-0 left-0 right-0 overflow-hidden h-16 sm:h-20 md:h-24">
         <svg 
@@ -128,7 +128,7 @@ export const Services: React.FC = () => {
         <ScrollReveal variant="fadeUp" duration={0.7}>
           <SectionHeading 
             preTitle="WHAT WE DO?"
-            title="The service we offer is specifically designed to meet your needs."
+            title="Professional IT services designed to grow your business."
           />
         </ScrollReveal>
 

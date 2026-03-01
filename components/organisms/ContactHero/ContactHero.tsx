@@ -42,7 +42,7 @@ export const ContactHero: React.FC = () => {
             </div>
             <div>
               <p className="font-semibold text-gray-900 text-sm md:text-base mb-1">Address</p>
-              <p className="text-gray-600 text-sm md:text-base">MG Road, Sector 14, Gurugram, Haryana, India</p>
+              <p className="text-gray-600 text-sm md:text-base">309, Bansiwala Tower, Agrasen Square, Indore, Madhya Pradesh, India - 452001</p>
             </div>
           </div>
           
@@ -54,8 +54,8 @@ export const ContactHero: React.FC = () => {
             </div>
             <div>
               <p className="font-semibold text-gray-900 text-sm md:text-base mb-1">Phone</p>
-              <a href="tel:+919876543210" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
-                +91 88711 71445
+                <a href="tel:+918871171445" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors">
+                +91-887 117 1445
               </a>
             </div>
           </div>
@@ -68,8 +68,8 @@ export const ContactHero: React.FC = () => {
             </div>
             <div>
               <p className="font-semibold text-gray-900 text-sm md:text-base mb-1">E-mail</p>
-              <a href="mailto:career24x7growth@gmail.com" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors break-all">
-                career24x7growth@gmail.com
+              <a href="mailto:work@hexaloop.com" className="text-gray-600 hover:text-blue-600 text-sm md:text-base transition-colors break-all">
+                work@hexaloop.com
               </a>
             </div>
           </div>

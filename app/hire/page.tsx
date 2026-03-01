@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { Header } from '@/components/organisms/Header';
 import { Footer } from '@/components/organisms/Footer';
 import { PageTransition } from '@/components/atoms/PageTransition';
@@ -7,9 +8,49 @@ import { HireHero } from '@/components/organisms/HireHero';
 import { HireForm } from '@/components/molecules/HireForm';
 import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 
+export const metadata: Metadata = {
+  title: 'Hire Us - Get a Free Quote for Your Project | Hexaloop Indore',
+  description:
+    'Hire Hexaloop for your next project. Get a free quote for website design, mobile app development, SEO, custom software, cloud solutions, AI development & IT consulting. Affordable pricing for startups & enterprises in Indore and worldwide.',
+  keywords: [
+    'hire web developers Indore',
+    'hire app developers for startups in India',
+    'hire professional website designers for startups',
+    'hire IT consultants for business growth',
+    'hire software developers for business automation',
+    'hire AI developers for startups',
+    'hire digital marketing experts for small business growth',
+    'hire graphic designers in Indore',
+    'free project quote Indore',
+  ],
+  alternates: {
+    canonical: '/hire',
+  },
+  openGraph: {
+    title: 'Hire Us - Get a Free Quote | Hexaloop',
+    description:
+      'Start your project with Hexaloop. Website design, mobile apps, SEO, software development, AI solutions & more. Get a free customized proposal within 24 hours.',
+    url: '/hire',
+    type: 'website',
+  },
+};
+
+const hireBreadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hexaloop.in' },
+    { '@type': 'ListItem', position: 2, name: 'Hire Us', item: 'https://www.hexaloop.in/hire' },
+  ],
+};
+
 export default function HirePage() {
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(hireBreadcrumbJsonLd) }}
+      />
       <Header />
       <PageTransition>
         <main>

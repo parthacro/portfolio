@@ -10,7 +10,7 @@ import { Button } from '@/components/atoms/Button';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#3D4F5C] relative">
+    <footer className="bg-[#3D4F5C] relative" role="contentinfo" itemScope itemType="https://schema.org/WPFooter">
       {/* Wavy Top Border - Multiple flowing curves */}
       <div className="absolute top-0 left-0 right-0 overflow-hidden" style={{ transform: 'translateY(-99%)' }}>
         <svg
@@ -29,11 +29,11 @@ export const Footer: React.FC = () => {
         <div className="max-w-[1900px] mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
             <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center md:text-left max-w-2xl leading-tight px-2 sm:px-0">
-              Join our community by using our services and grow your business.
+              Partner with Hexaloop to build innovative digital solutions and grow your business.
             </h2>
             <div className="flex-shrink-0">
-              <Button href="#try-free" variant="primary">
-                Try It For Free
+              <Button href="/hire" variant="primary">
+                Get Free Quote
               </Button>
             </div>
           </div>
@@ -55,8 +55,9 @@ export const Footer: React.FC = () => {
                 <h3 className="text-2xl md:text-3xl font-bold">Hexaloop</h3>
               </div>
               <div className="space-y-2 text-gray-400 text-sm">
-                <p>© 2024 Hexaloop.</p>
+                <p>© 2016-{new Date().getFullYear()} Hexaloop.</p>
                 <p>All rights reserved.</p>
+                <p className="text-xs text-gray-500 mt-2">9+ Years of Excellence | 100+ Projects | 100+ Clients</p>
               </div>
               {/* Social Icons */}
               <div className="flex gap-4 pt-2">
@@ -110,24 +111,24 @@ export const Footer: React.FC = () => {
 
             {/* Get in Touch Column */}
             <FooterColumn title="Get in Touch">
-              <div className="space-y-3 text-gray-400 text-sm md:text-base">
-                <p>Capital Tower,</p>
-                <p>Sapna Sangeeta Road,</p>
-                <p>Indore (M.P.) India - 452001</p>
-                <p className="pt-3">work@hexaloop.com</p>
-                <p>+91-887 117 1445</p>
-              </div>
+              <address className="space-y-3 text-gray-400 text-sm md:text-base not-italic" itemScope itemType="https://schema.org/PostalAddress">
+                <p itemProp="streetAddress">309, Bansiwala Tower,</p>
+                <p>Agrasen Square,</p>
+                <p><span itemProp="addressLocality">Indore</span> (<span itemProp="addressRegion">M.P.</span>) <span itemProp="addressCountry">India</span> - <span itemProp="postalCode">452001</span></p>
+                <p className="pt-3"><a href="mailto:work@hexaloop.com" className="hover:text-[#5EBEEB] transition-colors" itemProp="email">work@hexaloop.com</a></p>
+                <p><a href="tel:+918871171445" className="hover:text-[#5EBEEB] transition-colors" itemProp="telephone">+91-887 117 1445</a></p>
+              </address>
             </FooterColumn>
 
             {/* Learn More Column */}
             <FooterColumn title="Learn More">
-              <div className="space-y-2">
+              <nav aria-label="Footer navigation" className="space-y-2">
                 <FooterLink href="/about">About Us</FooterLink>
-                <FooterLink href="/story">Our Story</FooterLink>
+                <FooterLink href="/services">Our Services</FooterLink>
                 <FooterLink href="/projects">Projects</FooterLink>
-                <FooterLink href="/terms">Terms of Use</FooterLink>
-                <FooterLink href="/privacy">Privacy Policy</FooterLink>
-              </div>
+                <FooterLink href="/contact">Contact Us</FooterLink>
+                <FooterLink href="/hire">Hire Us</FooterLink>
+              </nav>
             </FooterColumn>
 
             {/* Newsletter Column */}

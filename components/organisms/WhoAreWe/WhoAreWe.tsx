@@ -113,14 +113,14 @@ const TeamCollage = () => (
 
 export const WhoAreWe: React.FC = () => {
   const features = [
-    'High quality software development services',
-    'Focused on client specific requirements',
-    'Professional and on-time delivery',
-    'Affordable pricing and reliable solutions'
+    'High quality software development services with 9+ years of expertise',
+    'Focused on client specific requirements with 100+ projects delivered',
+    'Professional and on-time delivery for startups & enterprises',
+    'Affordable pricing and reliable solutions for businesses in Indore & worldwide'
   ];
 
   return (
-    <section className="pt-24 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="pt-24 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden" aria-label="About Hexaloop">
       {/* Background decorative elements */}
       <div className="absolute top-20 left-10 w-48 h-48 sm:w-64 sm:h-64 bg-[#FFB347]/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-48 h-48 sm:w-64 sm:h-64 bg-[#5EBEEB]/5 rounded-full blur-3xl"></div>
@@ -142,14 +142,14 @@ export const WhoAreWe: React.FC = () => {
             {/* Main Description */}
             <ScrollReveal variant="fadeLeft" delay={0.1} duration={0.7}>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-5 md:mb-6">
-                Hexaloop is a global leading software products and services company. We provide wide range of services in various areas.
+                Hexaloop is a <strong>leading IT company in Indore</strong>, Madhya Pradesh, with <strong>9+ years of industry experience</strong> and a proven track record of delivering <strong>100+ successful projects</strong> for <strong>100+ satisfied clients</strong> across India and globally.
               </p>
             </ScrollReveal>
 
             {/* Secondary Description */}
             <ScrollReveal variant="fadeLeft" delay={0.2} duration={0.7}>
               <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-5 sm:mb-6 md:mb-8">
-                We offer high quality and reliable software development services focused on the client's specific requirement. Our main aim is to provide our clients best quality applications and deliver them on time without any hassle. We have efficient and experienced team of developers who have very good expertise in various technologies.
+                We specialize in website design & development, mobile app development, SEO & digital marketing, custom software development, cloud solutions, agentic AI solutions, and IT consulting. Our expert team serves startups, SMEs, and enterprises in IT, education, healthcare, retail, manufacturing, e-commerce, fintech, and more — delivering affordable, scalable, and innovative technology solutions from Indore to the world.
               </p>
             </ScrollReveal>
 

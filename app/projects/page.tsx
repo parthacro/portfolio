@@ -8,9 +8,22 @@ import { SectionWrapper } from '@/components/atoms/SectionWrapper';
 import { SectionHeading } from '@/components/atoms/SectionHeading';
 import { ScrollReveal } from '@/components/atoms/ScrollReveal';
 
+const projectsBreadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.hexaloop.in' },
+    { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://www.hexaloop.in/projects' },
+  ],
+};
+
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsBreadcrumbJsonLd) }}
+      />
       <Header />
       <main className="pt-20 sm:pt-24 md:pt-0 pb-20 sm:pb-24 md:pb-32">
         <SectionWrapper>
