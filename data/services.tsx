@@ -302,10 +302,9 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
         ),
-        price: 9,
-        period: 'mo',
+        price: 15000,
+        period: '',
         features: [
-          { text: '1 Website Design Project', included: true },
           { text: 'Up to 5 Pages', included: true },
           { text: 'Responsive Design', included: true },
           { text: 'Basic SEO Setup', included: true },
@@ -322,11 +321,10 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
           </svg>
         ),
-        price: 19,
-        period: 'mo',
+        price: 50000,
+        period: '',
         features: [
-          { text: 'Up to 3 Design Projects', included: true },
-          { text: 'Up to 15 Pages', included: true },
+          { text: '15 Pages', included: true },
           { text: 'Responsive Design', included: true },
           { text: 'Advanced SEO Optimization', included: true },
           { text: 'Custom Animations', included: true },
@@ -343,11 +341,11 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         ),
-        price: 49,
-        period: 'mo',
+        price: 150000,
+        period: '',
         features: [
           { text: 'Unlimited Projects', included: true },
-          { text: 'Unlimited Pages', included: true },
+          { text: '25 Pages', included: true },
           { text: 'Premium Responsive Design', included: true },
           { text: 'Enterprise SEO Package', included: true },
           { text: 'Advanced Animations & Effects', included: true },
@@ -463,7 +461,7 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
         ),
-        price: 15,
+        price: 15000,
         period: 'mo',
         features: [
           { text: 'Basic SEO Audit', included: true },
@@ -483,7 +481,7 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         ),
-        price: 29,
+        price: 50000,
         period: 'mo',
         features: [
           { text: 'Comprehensive SEO Audit', included: true },
@@ -504,16 +502,16 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
           </svg>
         ),
-        price: 59,
+        price: 100000,
         period: 'mo',
         features: [
           { text: 'Enterprise SEO Strategy', included: true },
-          { text: 'Unlimited Keywords Optimization', included: true },
+          { text: '50 Keywords Optimization', included: true },
           { text: 'Full Technical SEO Implementation', included: true },
           { text: 'Aggressive Link Building (40+ links/month)', included: true },
           { text: 'Multi-Platform Social Media Management', included: true },
           { text: 'Content Marketing (8 posts/month)', included: true },
-          { text: 'PPC Campaign Management ($2000 ad spend)', included: true },
+          { text: 'PPC Campaign Management (rupee 2000 ad spend)', included: true },
           { text: 'Dedicated Account Manager & 24/7 Support', included: true },
         ],
       },
@@ -683,8 +681,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
           </svg>
         ),
-        price: 25,
-        period: 'mo',
+        price: 50000,
+        period: '',
         features: [
           { text: '1 Simple Mobile App', included: true },
           { text: 'Single Platform (iOS or Android)', included: true },
@@ -703,8 +701,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
           </svg>
         ),
-        price: 45,
-        period: 'mo',
+        price: 150000,
+        period: '',
         features: [
           { text: '1 Cross-Platform App', included: true },
           { text: 'Both iOS & Android', included: true },
@@ -713,7 +711,7 @@ export const servicesData: Service[] = [
           { text: 'Advanced Features (Auth, Payments)', included: true },
           { text: 'Push Notifications & Analytics', included: true },
           { text: 'App Store & Play Store Submission', included: true },
-          { text: '6 Months Support & Updates', included: true },
+          { text: '1 Month Support & Updates', included: true },
         ],
         highlighted: true,
       },
@@ -724,17 +722,17 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
           </svg>
         ),
-        price: 89,
-        period: 'mo',
+        price: 500000,
+        period: '',
         features: [
           { text: 'Complex Enterprise App', included: true },
           { text: 'Native iOS & Android Apps', included: true },
           { text: 'Premium Custom Design', included: true },
-          { text: 'Unlimited Screens', included: true },
+          { text: '25 Screens', included: true },
           { text: 'Full Backend & API Integration', included: true },
           { text: 'Advanced Features (AI, AR, etc.)', included: true },
           { text: 'Real-time Data & Cloud Integration', included: true },
-          { text: '12 Months Premium Support', included: true },
+          { text: '3 Months Support & Updates', included: true },
         ],
       },
     ],
@@ -846,10 +844,9 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
           </svg>
         ),
-        price: 12,
+        price: 10000,
         period: 'mo',
         features: [
-          { text: '5 Graphic Design Projects/Month', included: true },
           { text: 'Logo Design (1 concept)', included: true },
           { text: 'Social Media Graphics', included: true },
           { text: 'Business Card Design', included: true },
@@ -866,10 +863,9 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
         ),
-        price: 28,
+        price: 30000,
         period: 'mo',
         features: [
-          { text: '15 Graphic Design Projects/Month', included: true },
           { text: 'Logo Design (3 concepts)', included: true },
           { text: 'Complete Brand Identity Package', included: true },
           { text: 'Print & Digital Design', included: true },
@@ -887,10 +883,9 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
           </svg>
         ),
-        price: 55,
+        price: 60000,
         period: 'mo',
         features: [
-          { text: 'Unlimited Design Projects', included: true },
           { text: 'Complete Brand Development', included: true },
           { text: 'Motion Graphics & Animations', included: true },
           { text: '3D Design & Rendering', included: true },
@@ -1069,15 +1064,15 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
           </svg>
         ),
-        price: 35,
-        period: 'mo',
+        price: 100000,
+        period: '',
         features: [
           { text: 'Simple Web Application', included: true },
           { text: 'Up to 5 User Roles', included: true },
           { text: 'Basic Database Design', included: true },
           { text: 'User Authentication', included: true },
           { text: 'REST API Development', included: true },
-          { text: '3 Months Support', included: true },
+          { text: '1 Month Support', included: true },
           { text: 'Advanced Integrations', included: false },
           { text: 'Scalable Architecture', included: false },
         ],
@@ -1089,8 +1084,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
         ),
-        price: 69,
-        period: 'mo',
+        price: 250000,
+        period: '',
         features: [
           { text: 'Complex Web Application', included: true },
           { text: 'Unlimited User Roles & Permissions', included: true },
@@ -1099,7 +1094,7 @@ export const servicesData: Service[] = [
           { text: 'REST & GraphQL APIs', included: true },
           { text: 'Third-party Integrations', included: true },
           { text: 'Real-time Features', included: true },
-          { text: '6 Months Premium Support', included: true },
+          { text: '2 Months Support', included: true },
         ],
         highlighted: true,
       },
@@ -1110,8 +1105,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
           </svg>
         ),
-        price: 129,
-        period: 'mo',
+        price: 500000,
+        period: '',
         features: [
           { text: 'Enterprise-Grade Application', included: true },
           { text: 'Multi-tenant Architecture', included: true },
@@ -1120,7 +1115,7 @@ export const servicesData: Service[] = [
           { text: 'Custom Workflow Automation', included: true },
           { text: 'Machine Learning Integration', included: true },
           { text: 'Scalable Cloud Infrastructure', included: true },
-          { text: 'Dedicated Team & 24/7 Support', included: true },
+          { text: '3 Months Support', included: true },
         ],
       },
     ],
@@ -1291,8 +1286,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
           </svg>
         ),
-        price: 20,
-        period: 'mo',
+        price: 50000,
+        period: '',
         features: [
           { text: 'Cloud Setup & Configuration', included: true },
           { text: 'Single Cloud Platform', included: true },
@@ -1311,8 +1306,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
           </svg>
         ),
-        price: 42,
-        period: 'mo',
+        price: 100000,
+        period: '',
         features: [
           { text: 'Multi-Cloud Strategy', included: true },
           { text: 'Advanced Infrastructure Architecture', included: true },
@@ -1332,8 +1327,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
           </svg>
         ),
-        price: 79,
-        period: 'mo',
+        price: 200000,
+        period: '',
         features: [
           { text: 'Enterprise Cloud Architecture', included: true },
           { text: 'Multi-Region Deployment', included: true },
@@ -1503,8 +1498,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
           </svg>
         ),
-        price: 50,
-        period: 'mo',
+        price: 100000,
+        period: '',
         features: [
           { text: 'Simple AI Chatbot', included: true },
           { text: 'Basic RAG Implementation', included: true },
@@ -1523,8 +1518,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         ),
-        price: 99,
-        period: 'mo',
+        price: 150000,
+        period: '',
         features: [
           { text: 'Advanced AI Agent System', included: true },
           { text: 'Custom RAG with Fine-tuning', included: true },
@@ -1544,8 +1539,8 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
           </svg>
         ),
-        price: 199,
-        period: 'mo',
+        price: 500000,
+        period: '',
         features: [
           { text: 'Enterprise Multi-Agent System', included: true },
           { text: 'Custom AI Model Development', included: true },
@@ -1724,10 +1719,9 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
         ),
-        price: 18,
+        price: 50000,
         period: 'mo',
         features: [
-          { text: 'Technology Assessment', included: true },
           { text: 'Strategic Planning Session (2 hrs/month)', included: true },
           { text: 'Architecture Review', included: true },
           { text: 'Basic Tech Stack Recommendations', included: true },
@@ -1744,10 +1738,9 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         ),
-        price: 39,
+        price: 100000,
         period: 'mo',
         features: [
-          { text: 'Fractional CTO Services (8 hrs/month)', included: true },
           { text: 'Technology Strategy & Roadmap', included: true },
           { text: 'Architecture Design & Review', included: true },
           { text: 'Code Review & Best Practices', included: true },
@@ -1765,10 +1758,9 @@ export const servicesData: Service[] = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
           </svg>
         ),
-        price: 89,
+        price: 200000,
         period: 'mo',
         features: [
-          { text: 'Full-time Fractional CTO (20+ hrs/month)', included: true },
           { text: 'Enterprise Technology Strategy', included: true },
           { text: 'Digital Transformation Leadership', included: true },
           { text: 'Complete Architecture Oversight', included: true },
