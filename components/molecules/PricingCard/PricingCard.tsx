@@ -34,7 +34,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({ plan, serviceSlug, ser
       `Hi, I'm interested in the ${planName} plan for ${serviceTitle}.\n\n` +
       `Plan Details:\n` +
       `- Plan: ${planName}\n` +
-      `- Price: $${plan.price}/${plan.period}\n` +
+      `- Price: ₹${plan.price.toLocaleString('en-IN')}\n` +
       `- Features: ${includedFeatures}\n\n` +
       `Please provide me with more information and a detailed quotation.\n\n` +
       `Thank you!`
@@ -70,9 +70,11 @@ export const PricingCard: React.FC<PricingCardProps> = ({ plan, serviceSlug, ser
 
         {/* Price */}
         <div className="text-center mb-4 sm:mb-6">
-          <span className="text-gray-600 text-sm sm:text-lg">$</span>
-          <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">{plan.price}</span>
-          <span className="text-gray-600 text-sm sm:text-lg">/{plan.period}</span>
+          <span className="text-gray-600 text-sm sm:text-lg">₹</span>
+          <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">{plan.price.toLocaleString('en-IN')}</span>
+          {plan.period && (
+            <span className="text-gray-600 text-sm sm:text-base md:text-lg">/month</span>
+          )}
         </div>
 
         {/* Features */}
